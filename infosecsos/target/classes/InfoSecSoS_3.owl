@@ -1,0 +1,1339 @@
+Prefix(:=<http://www.labesc.unirio.br/InfoSecSoS#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.labesc.unirio.br/InfoSecSoS>
+<http://www.labesc.unirio.br/InfoSecSoS>
+
+Declaration(Class(:Accept))
+Declaration(Class(:Access_Control))
+Declaration(Class(:Acknowledged_System_of_Systems))
+Declaration(Class(:Advanced_Persistent_Threats))
+Declaration(Class(:Adversary))
+Declaration(Class(:Adwares))
+Declaration(Class(:Algorithm))
+Declaration(Class(:Analysis_and_Validation))
+Declaration(Class(:Application_Domain))
+Declaration(Class(:Artificial_Intelligence))
+Declaration(Class(:Assessment_Methodology))
+Declaration(Class(:Asset))
+Declaration(Class(:Attacks_on_IoT_Devices))
+Declaration(Class(:Attribute_Based_Encryption))
+Declaration(Class(:Backup))
+Declaration(Class(:Building_Management))
+Declaration(Class(:Business_E-mail_Compromise))
+Declaration(Class(:Business_Environment))
+Declaration(Class(:Camubot))
+Declaration(Class(:Case_Study))
+Declaration(Class(:Central_Authority))
+Declaration(Class(:Centralized_System_of_Systems))
+Declaration(Class(:Chalenge))
+Declaration(Class(:Coalition_System_of_Systems))
+Declaration(Class(:Collaborative_System_of_Systems))
+Declaration(Class(:Comparative_Analysis))
+Declaration(Class(:Complexity))
+Declaration(Class(:Components_Information_Security))
+Declaration(Class(:Components_Systems_of_Systems))
+Declaration(Class(:Compromise))
+Declaration(Class(:Constituent))
+Declaration(Class(:Constituent_Stakeholder))
+Declaration(Class(:Constituint_Characteristic))
+Declaration(Class(:Control))
+Declaration(Class(:Corrective))
+Declaration(Class(:Cryptography))
+Declaration(Class(:DDoS-for-hire))
+Declaration(Class(:Data-Intensive))
+Declaration(Class(:Data_Privacy_Level))
+Declaration(Class(:Date_and_Time))
+Declaration(Class(:Deep_Learning))
+Declaration(Class(:Dentralized_System_of_Systems))
+Declaration(Class(:Derived_Classes))
+Declaration(Class(:Descriptive_Analysis))
+Declaration(Class(:Detective))
+Declaration(Class(:Disaster_Recovery))
+Declaration(Class(:Dynamic_Architecture))
+Declaration(Class(:Elliptic_Curve))
+Declaration(Class(:Emergence))
+Declaration(Class(:Emergente_Behavior))
+Declaration(Class(:Energy_Distribution))
+Declaration(Class(:Environment))
+Declaration(Class(:Environment_Simulation))
+Declaration(Class(:Estate_Property))
+Declaration(Class(:Evolutionary_Algorithm))
+Declaration(Class(:Evolutionary_Development))
+Declaration(Class(:FIS))
+Declaration(Class(:Federated_System_of_Systems))
+Declaration(Class(:Global_Mission))
+Declaration(Class(:Health))
+Declaration(Class(:Heterogeneity))
+Declaration(Class(:Human_Factor))
+Declaration(Class(:Human_Factor_Actor_Behavior_Factor))
+Declaration(Class(:Human_Factor_Customer_Type_Factor))
+Declaration(Class(:Incident))
+Declaration(Class(:Incident_Type))
+Declaration(Class(:Individual_Mission))
+Declaration(Class(:Information_Transparency))
+Declaration(Class(:Intellectual_Property))
+Declaration(Class(:Interoperability))
+Declaration(Class(:Lost_Value))
+Declaration(Class(:Machine_Learning))
+Declaration(Class(:Malicious_Docs))
+Declaration(Class(:Managerial_Independence))
+Declaration(Class(:Markov_Chain))
+Declaration(Class(:Military))
+Declaration(Class(:Mission))
+Declaration(Class(:Mitigate))
+Declaration(Class(:Money))
+Declaration(Class(:Monitoring_Scheme))
+Declaration(Class(:Monte_Carlo))
+Declaration(Class(:News_Source))
+Declaration(Class(:Operacional_Independence))
+Declaration(Class(:Organisation))
+Declaration(Class(:Organisation_Name))
+Declaration(Class(:Physical_Distribution))
+Declaration(Class(:Physical_Site_Characteristic))
+Declaration(Class(:Point_of_Vulnerability))
+Declaration(Class(:Point_of_Vulnerability_Architecture))
+Declaration(Class(:Point_of_Vulnerability_Constituents_Interface))
+Declaration(Class(:Preventative))
+Declaration(Class(:Prevention))
+Declaration(Class(:Private_key))
+Declaration(Class(:Probabilistic_Algorithm))
+Declaration(Class(:Product))
+Declaration(Class(:Protocol))
+Declaration(Class(:Public_Key))
+Declaration(Class(:Public_Safety))
+Declaration(Class(:Quality_Attribute))
+Declaration(Class(:RSA))
+Declaration(Class(:Region))
+Declaration(Class(:Reject))
+Declaration(Class(:Reported))
+Declaration(Class(:Response))
+Declaration(Class(:Reuse))
+Declaration(Class(:Risk))
+Declaration(Class(:Risk_Treatment))
+Declaration(Class(:Risk_of_Attacks_Cyber_Attack))
+Declaration(Class(:Sector))
+Declaration(Class(:Security_Belief))
+Declaration(Class(:Security_Policy))
+Declaration(Class(:Services))
+Declaration(Class(:Size))
+Declaration(Class(:Size_Systems_of_Systems))
+Declaration(Class(:Smart_Car))
+Declaration(Class(:Smart_City))
+Declaration(Class(:SoIS))
+Declaration(Class(:Social_Engineering))
+Declaration(Class(:Software_Architecture))
+Declaration(Class(:Specific_Factor))
+Declaration(Class(:Spyware))
+Declaration(Class(:Stakeholder))
+Declaration(Class(:Suspected))
+Declaration(Class(:Suspected_Compromise))
+Declaration(Class(:System))
+Declaration(Class(:Systems_of_Systems_Characteristic))
+Declaration(Class(:Systems_of_Systems_Engineering))
+Declaration(Class(:Systems_of_Systems_Stakeholder))
+Declaration(Class(:Systems_of_Systems_Type))
+Declaration(Class(:Targeted_Attacks))
+Declaration(Class(:Targeting_Strategy))
+Declaration(Class(:Technology))
+Declaration(Class(:Threat_Type))
+Declaration(Class(:Timescale))
+Declaration(Class(:Traffic_Control))
+Declaration(Class(:Transfer))
+Declaration(Class(:Transport))
+Declaration(Class(:Transport_Integration))
+Declaration(Class(:Update))
+Declaration(Class(:Use_Systems_of_Systems))
+Declaration(Class(:Variability))
+Declaration(Class(:Virtual_System_of_Systems))
+Declaration(Class(:Viruses))
+Declaration(Class(:Vulnerability_Point_Analysis))
+Declaration(Class(:by_Experts))
+Declaration(Class(<http://www.labesc.unirio.br/InfoSecSoS#Directed/Organizational_System_of_Systems>))
+Declaration(ObjectProperty(:IsHeldByComponents_Information_Security))
+Declaration(ObjectProperty(:attacksComponents_Systems_of_Systems))
+Declaration(ObjectProperty(:hasApplication_Domain))
+Declaration(ObjectProperty(:hasComponents_Systems_of_Systems))
+Declaration(ObjectProperty(:isAppliedComponents_Information_Security))
+Declaration(DataProperty(:cryptographyPrivateKeyHasName))
+Declaration(DataProperty(:probabilisticAlgorithmHasName))
+Declaration(NamedIndividual(:Adversary))
+Declaration(NamedIndividual(:Analysis_and_Validation_by_Experts))
+Declaration(NamedIndividual(:Artificial_Intelligence-Deep_Learning))
+Declaration(NamedIndividual(:Artificial_Intelligence-Machine_Learning))
+Declaration(NamedIndividual(:Asset))
+Declaration(NamedIndividual(:Attribute_Based_Private_Key_Encryption))
+Declaration(NamedIndividual(:Backup))
+Declaration(NamedIndividual(:Building_Management))
+Declaration(NamedIndividual(:Business_Environment))
+Declaration(NamedIndividual(:Case_Study))
+Declaration(NamedIndividual(:Comparative_Analysis))
+Declaration(NamedIndividual(:Control))
+Declaration(NamedIndividual(:Cryptography_Private_Key_Eliptical_Curves))
+Declaration(NamedIndividual(:Cryptography_Private_Key_RSA))
+Declaration(NamedIndividual(:Date_and_Time))
+Declaration(NamedIndividual(:Descriptive_Analysis))
+Declaration(NamedIndividual(:Disaster_Recovery))
+Declaration(NamedIndividual(:Energy_Distribution))
+Declaration(NamedIndividual(:Environment_Simulation))
+Declaration(NamedIndividual(:Estate_Property))
+Declaration(NamedIndividual(:Evolutionary_Algorithm))
+Declaration(NamedIndividual(:Health))
+Declaration(NamedIndividual(:Human_Factor-Actor_Behavior))
+Declaration(NamedIndividual(:Human_Factor-Customer_Type))
+Declaration(NamedIndividual(:Incident))
+Declaration(NamedIndividual(:Incident_Type))
+Declaration(NamedIndividual(:Lost_Value))
+Declaration(NamedIndividual(:Monitoring_Scheme))
+Declaration(NamedIndividual(:News_Source))
+Declaration(NamedIndividual(:Organisation))
+Declaration(NamedIndividual(:Organisation_Name))
+Declaration(NamedIndividual(:Point_of_Vulnerability-Architecture))
+Declaration(NamedIndividual(:Point_of_Vulnerability-Constituents_Interface))
+Declaration(NamedIndividual(:Probabilistic_Algorithm_Markov_Chain))
+Declaration(NamedIndividual(:Probabilistic_Algorithm_Monte_Carlo))
+Declaration(NamedIndividual(:Protocol))
+Declaration(NamedIndividual(:Public_Safety))
+Declaration(NamedIndividual(:Response))
+Declaration(NamedIndividual(:Risk))
+Declaration(NamedIndividual(:Risk_Treatment))
+Declaration(NamedIndividual(:Risk_of_Attacks-Cyber_Attack))
+Declaration(NamedIndividual(:Security_Belief))
+Declaration(NamedIndividual(:Security_Policy-Access_Control))
+Declaration(NamedIndividual(:Security_Policy-Data_Privacy_Level))
+Declaration(NamedIndividual(:Smart_Car))
+Declaration(NamedIndividual(:Targeting_Strategy))
+Declaration(NamedIndividual(:Threat_Type-Advanced_Persistent_Threats))
+Declaration(NamedIndividual(:Threat_Type-Adwares))
+Declaration(NamedIndividual(:Threat_Type-Attacks_on_IoT_Devices))
+Declaration(NamedIndividual(:Threat_Type-Business_E-mail_Compromise))
+Declaration(NamedIndividual(:Threat_Type-Camubot))
+Declaration(NamedIndividual(:Threat_Type-DDoS-for-hire))
+Declaration(NamedIndividual(:Threat_Type-Malicious_Docs))
+Declaration(NamedIndividual(:Threat_Type-Social_Engineering))
+Declaration(NamedIndividual(:Threat_Type-Spyware))
+Declaration(NamedIndividual(:Threat_Type-Targeted_Attacks))
+Declaration(NamedIndividual(:Threat_Type-Viruses))
+Declaration(NamedIndividual(:Timescale))
+Declaration(NamedIndividual(:Traffic_Control))
+Declaration(NamedIndividual(:Transport_Integration))
+Declaration(NamedIndividual(:Vulnerability_Point_Analysis))
+############################
+#   Object Properties
+############################
+
+# Object Property: :IsHeldByComponents_Information_Security (:IsHeldByComponents_Information_Security)
+
+InverseObjectProperties(:IsHeldByComponents_Information_Security :hasComponents_Systems_of_Systems)
+ObjectPropertyDomain(:IsHeldByComponents_Information_Security :Components_Systems_of_Systems)
+ObjectPropertyRange(:IsHeldByComponents_Information_Security :Components_Information_Security)
+ObjectPropertyRange(:IsHeldByComponents_Information_Security ObjectSomeValuesFrom(:IsHeldByComponents_Information_Security :Components_Information_Security))
+
+# Object Property: :attacksComponents_Systems_of_Systems (:attacksComponents_Systems_of_Systems)
+
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :Advanced_Persistent_Threats)
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :Adwares)
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :Attacks_on_IoT_Devices)
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :Business_E-mail_Compromise)
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :Camubot)
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :DDoS-for-hire)
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :Malicious_Docs)
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :Social_Engineering)
+ObjectPropertyDomain(:attacksComponents_Systems_of_Systems :Targeted_Attacks)
+ObjectPropertyRange(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems)
+
+# Object Property: :hasApplication_Domain (:hasApplication_Domain)
+
+ObjectPropertyDomain(:hasApplication_Domain :Assessment_Methodology)
+ObjectPropertyDomain(:hasApplication_Domain :Specific_Factor)
+ObjectPropertyDomain(:hasApplication_Domain :Technology)
+ObjectPropertyRange(:hasApplication_Domain ObjectSomeValuesFrom(:hasApplication_Domain :Application_Domain))
+ObjectPropertyRange(:hasApplication_Domain ObjectSomeValuesFrom(:hasApplication_Domain :Building_Management))
+ObjectPropertyRange(:hasApplication_Domain ObjectSomeValuesFrom(:hasApplication_Domain :Energy_Distribution))
+ObjectPropertyRange(:hasApplication_Domain ObjectSomeValuesFrom(:hasApplication_Domain :Health))
+ObjectPropertyRange(:hasApplication_Domain ObjectSomeValuesFrom(:hasApplication_Domain :Public_Safety))
+ObjectPropertyRange(:hasApplication_Domain ObjectSomeValuesFrom(:hasApplication_Domain :Smart_Car))
+ObjectPropertyRange(:hasApplication_Domain ObjectSomeValuesFrom(:hasApplication_Domain :Traffic_Control))
+ObjectPropertyRange(:hasApplication_Domain ObjectSomeValuesFrom(:hasApplication_Domain :Transport_Integration))
+
+# Object Property: :hasComponents_Systems_of_Systems (:hasComponents_Systems_of_Systems)
+
+ObjectPropertyDomain(:hasComponents_Systems_of_Systems :Components_Information_Security)
+ObjectPropertyRange(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems)
+ObjectPropertyRange(:hasComponents_Systems_of_Systems ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems))
+
+# Object Property: :isAppliedComponents_Information_Security (:isAppliedComponents_Information_Security)
+
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Assessment_Methodology)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Building_Management)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Energy_Distribution)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Health)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Public_Safety)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Smart_Car)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Specific_Factor)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Technology)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Traffic_Control)
+ObjectPropertyDomain(:isAppliedComponents_Information_Security :Transport_Integration)
+ObjectPropertyRange(:isAppliedComponents_Information_Security :Assessment_Methodology)
+ObjectPropertyRange(:isAppliedComponents_Information_Security :Specific_Factor)
+ObjectPropertyRange(:isAppliedComponents_Information_Security :Technology)
+ObjectPropertyRange(:isAppliedComponents_Information_Security ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Assessment_Methodology))
+ObjectPropertyRange(:isAppliedComponents_Information_Security ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Specific_Factor))
+ObjectPropertyRange(:isAppliedComponents_Information_Security ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Technology))
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :cryptographyPrivateKeyHasName (:cryptographyPrivateKeyHasName)
+
+DataPropertyDomain(:cryptographyPrivateKeyHasName :RSA)
+
+# Data Property: :probabilisticAlgorithmHasName (:probabilisticAlgorithmHasName)
+
+DataPropertyDomain(:probabilisticAlgorithmHasName :Monte_Carlo)
+
+# Data Property: owl:topDataProperty (owl:topDataProperty)
+
+DataPropertyDomain(owl:topDataProperty :Technology)
+DataPropertyRange(owl:topDataProperty xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Accept (:Accept)
+
+SubClassOf(:Accept :Risk_Treatment)
+
+# Class: :Access_Control (:Access_Control)
+
+SubClassOf(:Access_Control :Security_Policy)
+
+# Class: :Acknowledged_System_of_Systems (:Acknowledged_System_of_Systems)
+
+SubClassOf(:Acknowledged_System_of_Systems :Centralized_System_of_Systems)
+
+# Class: :Advanced_Persistent_Threats (:Advanced_Persistent_Threats)
+
+SubClassOf(:Advanced_Persistent_Threats :Threat_Type)
+
+# Class: :Adversary (:Adversary)
+
+SubClassOf(:Adversary :Components_Information_Security)
+
+# Class: :Adwares (:Adwares)
+
+SubClassOf(:Adwares :Threat_Type)
+
+# Class: :Algorithm (:Algorithm)
+
+SubClassOf(:Algorithm :Technology)
+
+# Class: :Analysis_and_Validation (:Analysis_and_Validation)
+
+SubClassOf(:Analysis_and_Validation :Assessment_Methodology)
+
+# Class: :Application_Domain (:Application_Domain)
+
+SubClassOf(:Application_Domain :Components_Systems_of_Systems)
+
+# Class: :Artificial_Intelligence (:Artificial_Intelligence)
+
+SubClassOf(:Artificial_Intelligence :Assessment_Methodology)
+
+# Class: :Assessment_Methodology (:Assessment_Methodology)
+
+SubClassOf(:Assessment_Methodology :Components_Information_Security)
+
+# Class: :Asset (:Asset)
+
+SubClassOf(:Asset :Components_Information_Security)
+
+# Class: :Attacks_on_IoT_Devices (:Attacks_on_IoT_Devices)
+
+SubClassOf(:Attacks_on_IoT_Devices :Threat_Type)
+
+# Class: :Attribute_Based_Encryption (:Attribute_Based_Encryption)
+
+SubClassOf(:Attribute_Based_Encryption :Public_Key)
+
+# Class: :Backup (:Backup)
+
+SubClassOf(:Backup :Technology)
+
+# Class: :Building_Management (:Building_Management)
+
+SubClassOf(:Building_Management :Application_Domain)
+
+# Class: :Business_E-mail_Compromise (:Business_E-mail_Compromise)
+
+SubClassOf(:Business_E-mail_Compromise :Threat_Type)
+
+# Class: :Business_Environment (:Business_Environment)
+
+SubClassOf(:Business_Environment :Components_Information_Security)
+
+# Class: :Camubot (:Camubot)
+
+SubClassOf(:Camubot :Threat_Type)
+
+# Class: :Case_Study (:Case_Study)
+
+SubClassOf(:Case_Study :Assessment_Methodology)
+
+# Class: :Central_Authority (:Central_Authority)
+
+SubClassOf(:Central_Authority :Components_Systems_of_Systems)
+
+# Class: :Centralized_System_of_Systems (:Centralized_System_of_Systems)
+
+SubClassOf(:Centralized_System_of_Systems :Systems_of_Systems_Type)
+
+# Class: :Chalenge (:Chalenge)
+
+SubClassOf(:Chalenge :Components_Systems_of_Systems)
+
+# Class: :Coalition_System_of_Systems (:Coalition_System_of_Systems)
+
+SubClassOf(:Coalition_System_of_Systems :Dentralized_System_of_Systems)
+
+# Class: :Collaborative_System_of_Systems (:Collaborative_System_of_Systems)
+
+SubClassOf(:Collaborative_System_of_Systems :Dentralized_System_of_Systems)
+
+# Class: :Comparative_Analysis (:Comparative_Analysis)
+
+SubClassOf(:Comparative_Analysis :Assessment_Methodology)
+
+# Class: :Complexity (:Complexity)
+
+SubClassOf(:Complexity :Systems_of_Systems_Characteristic)
+
+# Class: :Compromise (:Compromise)
+
+SubClassOf(:Compromise :Incident_Type)
+
+# Class: :Constituent (:Constituent)
+
+SubClassOf(:Constituent :Components_Systems_of_Systems)
+
+# Class: :Constituent_Stakeholder (:Constituent_Stakeholder)
+
+SubClassOf(:Constituent_Stakeholder :Stakeholder)
+
+# Class: :Constituint_Characteristic (:Constituint_Characteristic)
+
+SubClassOf(:Constituint_Characteristic :Components_Systems_of_Systems)
+
+# Class: :Control (:Control)
+
+SubClassOf(:Control :Components_Information_Security)
+
+# Class: :Corrective (:Corrective)
+
+SubClassOf(:Corrective :Control)
+
+# Class: :Cryptography (:Cryptography)
+
+SubClassOf(:Cryptography :Technology)
+
+# Class: :DDoS-for-hire (:DDoS-for-hire)
+
+SubClassOf(:DDoS-for-hire :Threat_Type)
+
+# Class: :Data-Intensive (:Data-Intensive)
+
+SubClassOf(:Data-Intensive :Constituint_Characteristic)
+
+# Class: :Data_Privacy_Level (:Data_Privacy_Level)
+
+SubClassOf(:Data_Privacy_Level :Security_Policy)
+
+# Class: :Date_and_Time (:Date_and_Time)
+
+SubClassOf(:Date_and_Time :Components_Information_Security)
+
+# Class: :Deep_Learning (:Deep_Learning)
+
+SubClassOf(:Deep_Learning :Artificial_Intelligence)
+
+# Class: :Dentralized_System_of_Systems (:Dentralized_System_of_Systems)
+
+SubClassOf(:Dentralized_System_of_Systems :Systems_of_Systems_Type)
+
+# Class: :Derived_Classes (:Derived_Classes)
+
+SubClassOf(:Derived_Classes :Components_Systems_of_Systems)
+
+# Class: :Descriptive_Analysis (:Descriptive_Analysis)
+
+SubClassOf(:Descriptive_Analysis :Assessment_Methodology)
+
+# Class: :Detective (:Detective)
+
+SubClassOf(:Detective :Control)
+
+# Class: :Disaster_Recovery (:Disaster_Recovery)
+
+SubClassOf(:Disaster_Recovery :Technology)
+
+# Class: :Dynamic_Architecture (:Dynamic_Architecture)
+
+SubClassOf(:Dynamic_Architecture :Software_Architecture)
+
+# Class: :Elliptic_Curve (:Elliptic_Curve)
+
+SubClassOf(:Elliptic_Curve :Private_key)
+
+# Class: :Emergence (:Emergence)
+
+SubClassOf(:Emergence :Constituint_Characteristic)
+
+# Class: :Emergente_Behavior (:Emergente_Behavior)
+
+SubClassOf(:Emergente_Behavior :Systems_of_Systems_Characteristic)
+
+# Class: :Energy_Distribution (:Energy_Distribution)
+
+SubClassOf(:Energy_Distribution :Application_Domain)
+
+# Class: :Environment (:Environment)
+
+SubClassOf(:Environment :Components_Systems_of_Systems)
+
+# Class: :Environment_Simulation (:Environment_Simulation)
+
+SubClassOf(:Environment_Simulation :Technology)
+
+# Class: :Estate_Property (:Estate_Property)
+
+SubClassOf(:Estate_Property :Components_Information_Security)
+
+# Class: :Evolutionary_Algorithm (:Evolutionary_Algorithm)
+
+SubClassOf(:Evolutionary_Algorithm :Algorithm)
+
+# Class: :Evolutionary_Development (:Evolutionary_Development)
+
+SubClassOf(:Evolutionary_Development :Systems_of_Systems_Characteristic)
+
+# Class: :FIS (:FIS)
+
+SubClassOf(:FIS :Derived_Classes)
+
+# Class: :Federated_System_of_Systems (:Federated_System_of_Systems)
+
+SubClassOf(:Federated_System_of_Systems :Dentralized_System_of_Systems)
+
+# Class: :Global_Mission (:Global_Mission)
+
+SubClassOf(:Global_Mission :Mission)
+
+# Class: :Health (:Health)
+
+SubClassOf(:Health :Application_Domain)
+
+# Class: :Heterogeneity (:Heterogeneity)
+
+SubClassOf(:Heterogeneity :Constituint_Characteristic)
+
+# Class: :Human_Factor (:Human_Factor)
+
+SubClassOf(:Human_Factor :Specific_Factor)
+
+# Class: :Human_Factor_Actor_Behavior_Factor (:Human_Factor_Actor_Behavior_Factor)
+
+SubClassOf(:Human_Factor_Actor_Behavior_Factor :Human_Factor)
+
+# Class: :Human_Factor_Customer_Type_Factor (:Human_Factor_Customer_Type_Factor)
+
+SubClassOf(:Human_Factor_Customer_Type_Factor :Human_Factor)
+
+# Class: :Incident (:Incident)
+
+SubClassOf(:Incident :Components_Information_Security)
+
+# Class: :Incident_Type (:Incident_Type)
+
+SubClassOf(:Incident_Type :Components_Information_Security)
+
+# Class: :Individual_Mission (:Individual_Mission)
+
+SubClassOf(:Individual_Mission :Mission)
+
+# Class: :Information_Transparency (:Information_Transparency)
+
+SubClassOf(:Information_Transparency :Chalenge)
+
+# Class: :Intellectual_Property (:Intellectual_Property)
+
+SubClassOf(:Intellectual_Property :Asset)
+
+# Class: :Interoperability (:Interoperability)
+
+SubClassOf(:Interoperability :Chalenge)
+
+# Class: :Lost_Value (:Lost_Value)
+
+SubClassOf(:Lost_Value :Components_Information_Security)
+
+# Class: :Machine_Learning (:Machine_Learning)
+
+SubClassOf(:Machine_Learning :Artificial_Intelligence)
+
+# Class: :Malicious_Docs (:Malicious_Docs)
+
+SubClassOf(:Malicious_Docs :Threat_Type)
+
+# Class: :Managerial_Independence (:Managerial_Independence)
+
+SubClassOf(:Managerial_Independence :Constituint_Characteristic)
+
+# Class: :Markov_Chain (:Markov_Chain)
+
+SubClassOf(:Markov_Chain :Probabilistic_Algorithm)
+
+# Class: :Military (:Military)
+
+SubClassOf(:Military :Use_Systems_of_Systems)
+
+# Class: :Mission (:Mission)
+
+SubClassOf(:Mission :Components_Systems_of_Systems)
+
+# Class: :Mitigate (:Mitigate)
+
+SubClassOf(:Mitigate :Risk_Treatment)
+
+# Class: :Money (:Money)
+
+SubClassOf(:Money :Asset)
+
+# Class: :Monitoring_Scheme (:Monitoring_Scheme)
+
+SubClassOf(:Monitoring_Scheme :Technology)
+
+# Class: :Monte_Carlo (:Monte_Carlo)
+
+SubClassOf(:Monte_Carlo :Probabilistic_Algorithm)
+
+# Class: :News_Source (:News_Source)
+
+SubClassOf(:News_Source :Components_Information_Security)
+
+# Class: :Operacional_Independence (:Operacional_Independence)
+
+SubClassOf(:Operacional_Independence :Constituint_Characteristic)
+
+# Class: :Organisation (:Organisation)
+
+SubClassOf(:Organisation :Components_Information_Security)
+
+# Class: :Organisation_Name (:Organisation_Name)
+
+SubClassOf(:Organisation_Name :Components_Information_Security)
+
+# Class: :Physical_Distribution (:Physical_Distribution)
+
+SubClassOf(:Physical_Distribution :Constituint_Characteristic)
+
+# Class: :Physical_Site_Characteristic (:Physical_Site_Characteristic)
+
+SubClassOf(:Physical_Site_Characteristic :Estate_Property)
+
+# Class: :Point_of_Vulnerability (:Point_of_Vulnerability)
+
+SubClassOf(:Point_of_Vulnerability :Specific_Factor)
+
+# Class: :Point_of_Vulnerability_Architecture (:Point_of_Vulnerability_Architecture)
+
+SubClassOf(:Point_of_Vulnerability_Architecture :Point_of_Vulnerability)
+
+# Class: :Point_of_Vulnerability_Constituents_Interface (:Point_of_Vulnerability_Constituents_Interface)
+
+SubClassOf(:Point_of_Vulnerability_Constituents_Interface :Point_of_Vulnerability)
+
+# Class: :Preventative (:Preventative)
+
+SubClassOf(:Preventative :Control)
+
+# Class: :Prevention (:Prevention)
+
+SubClassOf(:Prevention :Incident_Type)
+
+# Class: :Private_key (:Private_key)
+
+SubClassOf(:Private_key :Cryptography)
+
+# Class: :Probabilistic_Algorithm (:Probabilistic_Algorithm)
+
+SubClassOf(:Probabilistic_Algorithm :Algorithm)
+
+# Class: :Product (:Product)
+
+SubClassOf(:Product :Asset)
+
+# Class: :Protocol (:Protocol)
+
+SubClassOf(:Protocol :Technology)
+
+# Class: :Public_Key (:Public_Key)
+
+SubClassOf(:Public_Key :Cryptography)
+
+# Class: :Public_Safety (:Public_Safety)
+
+SubClassOf(:Public_Safety :Application_Domain)
+
+# Class: :Quality_Attribute (:Quality_Attribute)
+
+SubClassOf(:Quality_Attribute :Components_Systems_of_Systems)
+
+# Class: :RSA (:RSA)
+
+SubClassOf(:RSA :Public_Key)
+
+# Class: :Region (:Region)
+
+SubClassOf(:Region :Business_Environment)
+
+# Class: :Reject (:Reject)
+
+SubClassOf(:Reject :Risk_Treatment)
+
+# Class: :Reported (:Reported)
+
+SubClassOf(:Reported :Lost_Value)
+
+# Class: :Response (:Response)
+
+SubClassOf(:Response :Components_Information_Security)
+
+# Class: :Reuse (:Reuse)
+
+SubClassOf(:Reuse :Constituint_Characteristic)
+
+# Class: :Risk (:Risk)
+
+SubClassOf(:Risk :Components_Information_Security)
+
+# Class: :Risk_Treatment (:Risk_Treatment)
+
+SubClassOf(:Risk_Treatment :Components_Information_Security)
+
+# Class: :Risk_of_Attacks_Cyber_Attack (:Risk_of_Attacks_Cyber_Attack)
+
+SubClassOf(:Risk_of_Attacks_Cyber_Attack :Specific_Factor)
+
+# Class: :Sector (:Sector)
+
+SubClassOf(:Sector :Business_Environment)
+
+# Class: :Security_Belief (:Security_Belief)
+
+SubClassOf(:Security_Belief :Components_Information_Security)
+
+# Class: :Security_Policy (:Security_Policy)
+
+SubClassOf(:Security_Policy :Specific_Factor)
+
+# Class: :Services (:Services)
+
+SubClassOf(:Services :Estate_Property)
+
+# Class: :Size (:Size)
+
+SubClassOf(:Size :Estate_Property)
+
+# Class: :Size_Systems_of_Systems (:Size_Systems_of_Systems)
+
+SubClassOf(:Size_Systems_of_Systems :Systems_of_Systems_Characteristic)
+
+# Class: :Smart_Car (:Smart_Car)
+
+SubClassOf(:Smart_Car :Application_Domain)
+
+# Class: :Smart_City (:Smart_City)
+
+SubClassOf(:Smart_City :Use_Systems_of_Systems)
+
+# Class: :SoIS (:SoIS)
+
+SubClassOf(:SoIS :Derived_Classes)
+
+# Class: :Social_Engineering (:Social_Engineering)
+
+SubClassOf(:Social_Engineering :Threat_Type)
+
+# Class: :Software_Architecture (:Software_Architecture)
+
+SubClassOf(:Software_Architecture :Components_Systems_of_Systems)
+
+# Class: :Specific_Factor (:Specific_Factor)
+
+SubClassOf(:Specific_Factor :Components_Information_Security)
+
+# Class: :Spyware (:Spyware)
+
+SubClassOf(:Spyware :Threat_Type)
+
+# Class: :Stakeholder (:Stakeholder)
+
+SubClassOf(:Stakeholder :Components_Systems_of_Systems)
+
+# Class: :Suspected (:Suspected)
+
+SubClassOf(:Suspected :Lost_Value)
+
+# Class: :Suspected_Compromise (:Suspected_Compromise)
+
+SubClassOf(:Suspected_Compromise :Incident_Type)
+
+# Class: :System (:System)
+
+SubClassOf(:System :Estate_Property)
+
+# Class: :Systems_of_Systems_Characteristic (:Systems_of_Systems_Characteristic)
+
+SubClassOf(:Systems_of_Systems_Characteristic :Components_Systems_of_Systems)
+
+# Class: :Systems_of_Systems_Engineering (:Systems_of_Systems_Engineering)
+
+SubClassOf(:Systems_of_Systems_Engineering :Components_Systems_of_Systems)
+
+# Class: :Systems_of_Systems_Stakeholder (:Systems_of_Systems_Stakeholder)
+
+SubClassOf(:Systems_of_Systems_Stakeholder :Stakeholder)
+
+# Class: :Systems_of_Systems_Type (:Systems_of_Systems_Type)
+
+SubClassOf(:Systems_of_Systems_Type :Components_Systems_of_Systems)
+
+# Class: :Targeted_Attacks (:Targeted_Attacks)
+
+SubClassOf(:Targeted_Attacks :Threat_Type)
+
+# Class: :Targeting_Strategy (:Targeting_Strategy)
+
+SubClassOf(:Targeting_Strategy :Components_Information_Security)
+
+# Class: :Technology (:Technology)
+
+SubClassOf(:Technology :Components_Information_Security)
+
+# Class: :Threat_Type (:Threat_Type)
+
+SubClassOf(:Threat_Type :Components_Information_Security)
+
+# Class: :Timescale (:Timescale)
+
+SubClassOf(:Timescale :Components_Information_Security)
+
+# Class: :Traffic_Control (:Traffic_Control)
+
+SubClassOf(:Traffic_Control :Application_Domain)
+
+# Class: :Transfer (:Transfer)
+
+SubClassOf(:Transfer :Risk_Treatment)
+
+# Class: :Transport (:Transport)
+
+SubClassOf(:Transport :Use_Systems_of_Systems)
+
+# Class: :Transport_Integration (:Transport_Integration)
+
+SubClassOf(:Transport_Integration :Application_Domain)
+
+# Class: :Update (:Update)
+
+SubClassOf(:Update :Incident_Type)
+
+# Class: :Use_Systems_of_Systems (:Use_Systems_of_Systems)
+
+SubClassOf(:Use_Systems_of_Systems :Components_Systems_of_Systems)
+
+# Class: :Variability (:Variability)
+
+SubClassOf(:Variability :Systems_of_Systems_Characteristic)
+
+# Class: :Virtual_System_of_Systems (:Virtual_System_of_Systems)
+
+SubClassOf(:Virtual_System_of_Systems :Dentralized_System_of_Systems)
+
+# Class: :Viruses (:Viruses)
+
+SubClassOf(:Viruses :Threat_Type)
+
+# Class: :Vulnerability_Point_Analysis (:Vulnerability_Point_Analysis)
+
+SubClassOf(:Vulnerability_Point_Analysis :Technology)
+
+# Class: :by_Experts (:by_Experts)
+
+SubClassOf(:by_Experts :Analysis_and_Validation)
+
+# Class: <http://www.labesc.unirio.br/InfoSecSoS#Directed/Organizational_System_of_Systems> (<http://www.labesc.unirio.br/InfoSecSoS#Directed/Organizational_System_of_Systems>)
+
+SubClassOf(<http://www.labesc.unirio.br/InfoSecSoS#Directed/Organizational_System_of_Systems> :Centralized_System_of_Systems)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Adversary (:Adversary)
+
+ClassAssertion(:Adversary :Adversary)
+ClassAssertion(:Components_Information_Security :Adversary)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Adversary)
+
+# Individual: :Analysis_and_Validation_by_Experts (:Analysis_and_Validation_by_Experts)
+
+ClassAssertion(:Analysis_and_Validation :Analysis_and_Validation_by_Experts)
+ClassAssertion(:Assessment_Methodology :Analysis_and_Validation_by_Experts)
+ClassAssertion(:Components_Information_Security :Analysis_and_Validation_by_Experts)
+ClassAssertion(:by_Experts :Analysis_and_Validation_by_Experts)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Analysis_and_Validation_by_Experts)
+
+# Individual: :Artificial_Intelligence-Deep_Learning (:Artificial_Intelligence-Deep_Learning)
+
+ClassAssertion(:Assessment_Methodology :Artificial_Intelligence-Deep_Learning)
+ClassAssertion(:Components_Information_Security :Artificial_Intelligence-Deep_Learning)
+ClassAssertion(:Deep_Learning :Artificial_Intelligence-Deep_Learning)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Artificial_Intelligence-Deep_Learning)
+
+# Individual: :Artificial_Intelligence-Machine_Learning (:Artificial_Intelligence-Machine_Learning)
+
+ClassAssertion(:Assessment_Methodology :Artificial_Intelligence-Machine_Learning)
+ClassAssertion(:Components_Information_Security :Artificial_Intelligence-Machine_Learning)
+ClassAssertion(:Machine_Learning :Artificial_Intelligence-Machine_Learning)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Artificial_Intelligence-Machine_Learning)
+
+# Individual: :Asset (:Asset)
+
+ClassAssertion(:Asset :Asset)
+ClassAssertion(:Components_Information_Security :Asset)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Asset)
+
+# Individual: :Attribute_Based_Private_Key_Encryption (:Attribute_Based_Private_Key_Encryption)
+
+ClassAssertion(:Attribute_Based_Encryption :Attribute_Based_Private_Key_Encryption)
+ClassAssertion(:Components_Information_Security :Attribute_Based_Private_Key_Encryption)
+ClassAssertion(:Cryptography :Attribute_Based_Private_Key_Encryption)
+ClassAssertion(:Public_Key :Attribute_Based_Private_Key_Encryption)
+ClassAssertion(:Technology :Attribute_Based_Private_Key_Encryption)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Attribute_Based_Private_Key_Encryption)
+
+# Individual: :Backup (:Backup)
+
+ClassAssertion(:Backup :Backup)
+ClassAssertion(:Components_Information_Security :Backup)
+ClassAssertion(:Technology :Backup)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Backup)
+
+# Individual: :Building_Management (:Building_Management)
+
+ClassAssertion(:Application_Domain :Building_Management)
+ClassAssertion(:Building_Management :Building_Management)
+ClassAssertion(ObjectSomeValuesFrom(:hasApplication_Domain :Building_Management) :Building_Management)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Assessment_Methodology) :Building_Management)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Specific_Factor) :Building_Management)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Technology) :Building_Management)
+
+# Individual: :Business_Environment (:Business_Environment)
+
+ClassAssertion(:Business_Environment :Business_Environment)
+ClassAssertion(:Components_Information_Security :Business_Environment)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Business_Environment)
+
+# Individual: :Case_Study (:Case_Study)
+
+ClassAssertion(:Assessment_Methodology :Case_Study)
+ClassAssertion(:Case_Study :Case_Study)
+ClassAssertion(:Components_Information_Security :Case_Study)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Case_Study)
+
+# Individual: :Comparative_Analysis (:Comparative_Analysis)
+
+ClassAssertion(:Assessment_Methodology :Comparative_Analysis)
+ClassAssertion(:Comparative_Analysis :Comparative_Analysis)
+ClassAssertion(:Components_Information_Security :Comparative_Analysis)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Comparative_Analysis)
+
+# Individual: :Control (:Control)
+
+ClassAssertion(:Components_Information_Security :Control)
+ClassAssertion(:Control :Control)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Control)
+
+# Individual: :Cryptography_Private_Key_Eliptical_Curves (:Cryptography_Private_Key_Eliptical_Curves)
+
+ClassAssertion(:Components_Information_Security :Cryptography_Private_Key_Eliptical_Curves)
+ClassAssertion(:Cryptography :Cryptography_Private_Key_Eliptical_Curves)
+ClassAssertion(:Elliptic_Curve :Cryptography_Private_Key_Eliptical_Curves)
+ClassAssertion(:Private_key :Cryptography_Private_Key_Eliptical_Curves)
+ClassAssertion(:Technology :Cryptography_Private_Key_Eliptical_Curves)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Cryptography_Private_Key_Eliptical_Curves)
+
+# Individual: :Cryptography_Private_Key_RSA (:Cryptography_Private_Key_RSA)
+
+ClassAssertion(:Components_Information_Security :Cryptography_Private_Key_RSA)
+ClassAssertion(:Cryptography :Cryptography_Private_Key_RSA)
+ClassAssertion(:Public_Key :Cryptography_Private_Key_RSA)
+ClassAssertion(:RSA :Cryptography_Private_Key_RSA)
+ClassAssertion(:Technology :Cryptography_Private_Key_RSA)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Cryptography_Private_Key_RSA)
+DataPropertyAssertion(:cryptographyPrivateKeyHasName :Cryptography_Private_Key_RSA "RSA"^^xsd:string)
+DataPropertyAssertion(:cryptographyPrivateKeyHasName :Cryptography_Private_Key_RSA "Rivest-Shamir-Adleman"^^xsd:string)
+
+# Individual: :Date_and_Time (:Date_and_Time)
+
+ClassAssertion(:Components_Information_Security :Date_and_Time)
+ClassAssertion(:Date_and_Time :Date_and_Time)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Date_and_Time)
+
+# Individual: :Descriptive_Analysis (:Descriptive_Analysis)
+
+ClassAssertion(:Assessment_Methodology :Descriptive_Analysis)
+ClassAssertion(:Components_Information_Security :Descriptive_Analysis)
+ClassAssertion(:Descriptive_Analysis :Descriptive_Analysis)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Descriptive_Analysis)
+
+# Individual: :Disaster_Recovery (:Disaster_Recovery)
+
+ClassAssertion(:Components_Information_Security :Disaster_Recovery)
+ClassAssertion(:Disaster_Recovery :Disaster_Recovery)
+ClassAssertion(:Technology :Disaster_Recovery)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Disaster_Recovery)
+
+# Individual: :Energy_Distribution (:Energy_Distribution)
+
+ClassAssertion(:Application_Domain :Energy_Distribution)
+ClassAssertion(:Energy_Distribution :Energy_Distribution)
+ClassAssertion(ObjectSomeValuesFrom(:hasApplication_Domain :Energy_Distribution) :Energy_Distribution)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Assessment_Methodology) :Energy_Distribution)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Specific_Factor) :Energy_Distribution)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Technology) :Energy_Distribution)
+
+# Individual: :Environment_Simulation (:Environment_Simulation)
+
+ClassAssertion(:Components_Information_Security :Environment_Simulation)
+ClassAssertion(:Environment_Simulation :Environment_Simulation)
+ClassAssertion(:Technology :Environment_Simulation)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Environment_Simulation) :Environment_Simulation)
+
+# Individual: :Estate_Property (:Estate_Property)
+
+ClassAssertion(:Components_Information_Security :Estate_Property)
+ClassAssertion(:Estate_Property :Estate_Property)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Estate_Property)
+
+# Individual: :Evolutionary_Algorithm (:Evolutionary_Algorithm)
+
+ClassAssertion(:Algorithm :Evolutionary_Algorithm)
+ClassAssertion(:Components_Information_Security :Evolutionary_Algorithm)
+ClassAssertion(:Evolutionary_Algorithm :Evolutionary_Algorithm)
+ClassAssertion(:Technology :Evolutionary_Algorithm)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Evolutionary_Algorithm)
+
+# Individual: :Health (:Health)
+
+ClassAssertion(:Application_Domain :Health)
+ClassAssertion(:Health :Health)
+ClassAssertion(ObjectSomeValuesFrom(:hasApplication_Domain :Health) :Health)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Assessment_Methodology) :Health)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Specific_Factor) :Health)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Technology) :Health)
+
+# Individual: :Human_Factor-Actor_Behavior (:Human_Factor-Actor_Behavior)
+
+ClassAssertion(:Components_Information_Security :Human_Factor-Actor_Behavior)
+ClassAssertion(:Human_Factor :Human_Factor-Actor_Behavior)
+ClassAssertion(:Human_Factor_Actor_Behavior_Factor :Human_Factor-Actor_Behavior)
+ClassAssertion(:Specific_Factor :Human_Factor-Actor_Behavior)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Human_Factor-Actor_Behavior)
+
+# Individual: :Human_Factor-Customer_Type (:Human_Factor-Customer_Type)
+
+ClassAssertion(:Components_Information_Security :Human_Factor-Customer_Type)
+ClassAssertion(:Human_Factor :Human_Factor-Customer_Type)
+ClassAssertion(:Human_Factor_Customer_Type_Factor :Human_Factor-Customer_Type)
+ClassAssertion(:Specific_Factor :Human_Factor-Customer_Type)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Human_Factor-Customer_Type)
+
+# Individual: :Incident (:Incident)
+
+ClassAssertion(:Components_Information_Security :Incident)
+ClassAssertion(:Incident :Incident)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Incident)
+
+# Individual: :Incident_Type (:Incident_Type)
+
+ClassAssertion(:Components_Information_Security :Incident_Type)
+ClassAssertion(:Incident_Type :Incident_Type)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Incident_Type)
+
+# Individual: :Lost_Value (:Lost_Value)
+
+ClassAssertion(:Components_Information_Security :Lost_Value)
+ClassAssertion(:Lost_Value :Lost_Value)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Lost_Value)
+
+# Individual: :Monitoring_Scheme (:Monitoring_Scheme)
+
+ClassAssertion(:Components_Information_Security :Monitoring_Scheme)
+ClassAssertion(:Monitoring_Scheme :Monitoring_Scheme)
+ClassAssertion(:Technology :Monitoring_Scheme)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Monitoring_Scheme)
+
+# Individual: :News_Source (:News_Source)
+
+ClassAssertion(:Components_Information_Security :News_Source)
+ClassAssertion(:News_Source :News_Source)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :News_Source)
+
+# Individual: :Organisation (:Organisation)
+
+ClassAssertion(:Components_Information_Security :Organisation)
+ClassAssertion(:Organisation :Organisation)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Organisation)
+
+# Individual: :Organisation_Name (:Organisation_Name)
+
+ClassAssertion(:Components_Information_Security :Organisation_Name)
+ClassAssertion(:Organisation_Name :Organisation_Name)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Organisation_Name)
+
+# Individual: :Point_of_Vulnerability-Architecture (:Point_of_Vulnerability-Architecture)
+
+ClassAssertion(:Point_of_Vulnerability :Point_of_Vulnerability-Architecture)
+ClassAssertion(:Point_of_Vulnerability_Architecture :Point_of_Vulnerability-Architecture)
+ClassAssertion(:Specific_Factor :Point_of_Vulnerability-Architecture)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Point_of_Vulnerability-Architecture)
+
+# Individual: :Point_of_Vulnerability-Constituents_Interface (:Point_of_Vulnerability-Constituents_Interface)
+
+ClassAssertion(:Point_of_Vulnerability :Point_of_Vulnerability-Constituents_Interface)
+ClassAssertion(:Point_of_Vulnerability_Constituents_Interface :Point_of_Vulnerability-Constituents_Interface)
+ClassAssertion(:Specific_Factor :Point_of_Vulnerability-Constituents_Interface)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Point_of_Vulnerability-Constituents_Interface)
+
+# Individual: :Probabilistic_Algorithm_Markov_Chain (:Probabilistic_Algorithm_Markov_Chain)
+
+ClassAssertion(:Algorithm :Probabilistic_Algorithm_Markov_Chain)
+ClassAssertion(:Components_Information_Security :Probabilistic_Algorithm_Markov_Chain)
+ClassAssertion(:Markov_Chain :Probabilistic_Algorithm_Markov_Chain)
+ClassAssertion(:Probabilistic_Algorithm :Probabilistic_Algorithm_Markov_Chain)
+ClassAssertion(:Technology :Probabilistic_Algorithm_Markov_Chain)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Probabilistic_Algorithm_Markov_Chain)
+
+# Individual: :Probabilistic_Algorithm_Monte_Carlo (:Probabilistic_Algorithm_Monte_Carlo)
+
+ClassAssertion(:Algorithm :Probabilistic_Algorithm_Monte_Carlo)
+ClassAssertion(:Monte_Carlo :Probabilistic_Algorithm_Monte_Carlo)
+ClassAssertion(:Probabilistic_Algorithm :Probabilistic_Algorithm_Monte_Carlo)
+ClassAssertion(:Technology :Probabilistic_Algorithm_Monte_Carlo)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Probabilistic_Algorithm_Monte_Carlo)
+DataPropertyAssertion(:probabilisticAlgorithmHasName :Probabilistic_Algorithm_Monte_Carlo "Monte Carlo"^^xsd:string)
+
+# Individual: :Protocol (:Protocol)
+
+ClassAssertion(:Components_Information_Security :Protocol)
+ClassAssertion(:Protocol :Protocol)
+ClassAssertion(:Technology :Protocol)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Protocol)
+
+# Individual: :Public_Safety (:Public_Safety)
+
+ClassAssertion(:Application_Domain :Public_Safety)
+ClassAssertion(:Public_Safety :Public_Safety)
+ClassAssertion(ObjectSomeValuesFrom(:hasApplication_Domain :Public_Safety) :Public_Safety)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Assessment_Methodology) :Public_Safety)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Specific_Factor) :Public_Safety)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Technology) :Public_Safety)
+
+# Individual: :Response (:Response)
+
+ClassAssertion(:Components_Information_Security :Response)
+ClassAssertion(:Response :Response)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Response)
+
+# Individual: :Risk (:Risk)
+
+ClassAssertion(:Components_Information_Security :Risk)
+ClassAssertion(:Risk :Risk)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Risk)
+
+# Individual: :Risk_Treatment (:Risk_Treatment)
+
+ClassAssertion(:Components_Information_Security :Risk_Treatment)
+ClassAssertion(:Risk_Treatment :Risk_Treatment)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Risk_Treatment)
+
+# Individual: :Risk_of_Attacks-Cyber_Attack (:Risk_of_Attacks-Cyber_Attack)
+
+ClassAssertion(:Risk_of_Attacks_Cyber_Attack :Risk_of_Attacks-Cyber_Attack)
+ClassAssertion(:Specific_Factor :Risk_of_Attacks-Cyber_Attack)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Risk_of_Attacks-Cyber_Attack)
+
+# Individual: :Security_Belief (:Security_Belief)
+
+ClassAssertion(:Components_Information_Security :Security_Belief)
+ClassAssertion(:Security_Belief :Security_Belief)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Security_Belief)
+
+# Individual: :Security_Policy-Access_Control (:Security_Policy-Access_Control)
+
+ClassAssertion(:Access_Control :Security_Policy-Access_Control)
+ClassAssertion(:Security_Policy :Security_Policy-Access_Control)
+ClassAssertion(:Specific_Factor :Security_Policy-Access_Control)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Security_Policy-Access_Control)
+
+# Individual: :Security_Policy-Data_Privacy_Level (:Security_Policy-Data_Privacy_Level)
+
+ClassAssertion(:Data_Privacy_Level :Security_Policy-Data_Privacy_Level)
+ClassAssertion(:Security_Policy :Security_Policy-Data_Privacy_Level)
+ClassAssertion(:Specific_Factor :Security_Policy-Data_Privacy_Level)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Security_Policy-Data_Privacy_Level)
+
+# Individual: :Smart_Car (:Smart_Car)
+
+ClassAssertion(:Application_Domain :Smart_Car)
+ClassAssertion(:Smart_Car :Smart_Car)
+ClassAssertion(ObjectSomeValuesFrom(:hasApplication_Domain :Smart_Car) :Smart_Car)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Assessment_Methodology) :Smart_Car)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Specific_Factor) :Smart_Car)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Technology) :Smart_Car)
+
+# Individual: :Targeting_Strategy (:Targeting_Strategy)
+
+ClassAssertion(:Components_Information_Security :Targeting_Strategy)
+ClassAssertion(:Targeting_Strategy :Targeting_Strategy)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Targeting_Strategy)
+
+# Individual: :Threat_Type-Advanced_Persistent_Threats (:Threat_Type-Advanced_Persistent_Threats)
+
+ClassAssertion(:Advanced_Persistent_Threats :Threat_Type-Advanced_Persistent_Threats)
+ClassAssertion(:Threat_Type :Threat_Type-Advanced_Persistent_Threats)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Advanced_Persistent_Threats)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Advanced_Persistent_Threats)
+
+# Individual: :Threat_Type-Adwares (:Threat_Type-Adwares)
+
+ClassAssertion(:Adwares :Threat_Type-Adwares)
+ClassAssertion(:Components_Information_Security :Threat_Type-Adwares)
+ClassAssertion(:Threat_Type :Threat_Type-Adwares)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Adwares)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Adwares)
+
+# Individual: :Threat_Type-Attacks_on_IoT_Devices (:Threat_Type-Attacks_on_IoT_Devices)
+
+ClassAssertion(:Attacks_on_IoT_Devices :Threat_Type-Attacks_on_IoT_Devices)
+ClassAssertion(:Threat_Type :Threat_Type-Attacks_on_IoT_Devices)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Attacks_on_IoT_Devices)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Attacks_on_IoT_Devices)
+
+# Individual: :Threat_Type-Business_E-mail_Compromise (:Threat_Type-Business_E-mail_Compromise)
+
+ClassAssertion(:Business_E-mail_Compromise :Threat_Type-Business_E-mail_Compromise)
+ClassAssertion(:Components_Information_Security :Threat_Type-Business_E-mail_Compromise)
+ClassAssertion(:Threat_Type :Threat_Type-Business_E-mail_Compromise)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Business_E-mail_Compromise)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Business_E-mail_Compromise)
+
+# Individual: :Threat_Type-Camubot (:Threat_Type-Camubot)
+
+ClassAssertion(:Camubot :Threat_Type-Camubot)
+ClassAssertion(:Components_Information_Security :Threat_Type-Camubot)
+ClassAssertion(:Threat_Type :Threat_Type-Camubot)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Camubot)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Camubot)
+
+# Individual: :Threat_Type-DDoS-for-hire (:Threat_Type-DDoS-for-hire)
+
+ClassAssertion(:Components_Information_Security :Threat_Type-DDoS-for-hire)
+ClassAssertion(:DDoS-for-hire :Threat_Type-DDoS-for-hire)
+ClassAssertion(:Threat_Type :Threat_Type-DDoS-for-hire)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-DDoS-for-hire)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-DDoS-for-hire)
+
+# Individual: :Threat_Type-Malicious_Docs (:Threat_Type-Malicious_Docs)
+
+ClassAssertion(:Components_Information_Security :Threat_Type-Malicious_Docs)
+ClassAssertion(:Malicious_Docs :Threat_Type-Malicious_Docs)
+ClassAssertion(:Threat_Type :Threat_Type-Malicious_Docs)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Malicious_Docs)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Malicious_Docs)
+
+# Individual: :Threat_Type-Social_Engineering (:Threat_Type-Social_Engineering)
+
+ClassAssertion(:Components_Information_Security :Threat_Type-Social_Engineering)
+ClassAssertion(:Social_Engineering :Threat_Type-Social_Engineering)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Social_Engineering)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Social_Engineering)
+
+# Individual: :Threat_Type-Spyware (:Threat_Type-Spyware)
+
+ClassAssertion(:Components_Information_Security :Threat_Type-Spyware)
+ClassAssertion(:Spyware :Threat_Type-Spyware)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Spyware)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Spyware)
+
+# Individual: :Threat_Type-Targeted_Attacks (:Threat_Type-Targeted_Attacks)
+
+ClassAssertion(:Targeted_Attacks :Threat_Type-Targeted_Attacks)
+ClassAssertion(:Threat_Type :Threat_Type-Targeted_Attacks)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Targeted_Attacks)
+ClassAssertion(ObjectMinCardinality(0 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Targeted_Attacks)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Targeted_Attacks)
+
+# Individual: :Threat_Type-Viruses (:Threat_Type-Viruses)
+
+ClassAssertion(:Components_Information_Security :Threat_Type-Viruses)
+ClassAssertion(:Viruses :Threat_Type-Viruses)
+ClassAssertion(ObjectSomeValuesFrom(:attacksComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Viruses)
+ClassAssertion(ObjectMinCardinality(1 :hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Threat_Type-Viruses)
+
+# Individual: :Timescale (:Timescale)
+
+ClassAssertion(:Components_Information_Security :Timescale)
+ClassAssertion(:Timescale :Timescale)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Timescale)
+
+# Individual: :Traffic_Control (:Traffic_Control)
+
+ClassAssertion(:Application_Domain :Traffic_Control)
+ClassAssertion(:Traffic_Control :Traffic_Control)
+ClassAssertion(ObjectSomeValuesFrom(:hasApplication_Domain :Traffic_Control) :Traffic_Control)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Assessment_Methodology) :Traffic_Control)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Specific_Factor) :Traffic_Control)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Technology) :Traffic_Control)
+
+# Individual: :Transport_Integration (:Transport_Integration)
+
+ClassAssertion(:Application_Domain :Transport_Integration)
+ClassAssertion(:Transport_Integration :Transport_Integration)
+ClassAssertion(ObjectSomeValuesFrom(:hasApplication_Domain :Transport_Integration) :Transport_Integration)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Assessment_Methodology) :Transport_Integration)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Specific_Factor) :Transport_Integration)
+ClassAssertion(ObjectSomeValuesFrom(:isAppliedComponents_Information_Security :Technology) :Transport_Integration)
+
+# Individual: :Vulnerability_Point_Analysis (:Vulnerability_Point_Analysis)
+
+ClassAssertion(:Components_Information_Security :Vulnerability_Point_Analysis)
+ClassAssertion(:Technology :Vulnerability_Point_Analysis)
+ClassAssertion(:Vulnerability_Point_Analysis :Vulnerability_Point_Analysis)
+ClassAssertion(ObjectSomeValuesFrom(:hasComponents_Systems_of_Systems :Components_Systems_of_Systems) :Vulnerability_Point_Analysis)
+
+
+)

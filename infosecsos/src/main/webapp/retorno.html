@@ -1,0 +1,486 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <title>InfoSecSoS Ontology - Resposta</title>
+    
+    <!-- Bootstrap 5 e ícones modernos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Fontes modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary-color: #8b5cf6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="0.5"/></svg>');
+            pointer-events: none;
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .response-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 32px 24px;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        .card-header h1 {
+            color: white;
+            font-weight: 600;
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 8px;
+            font-size: 0.95rem;
+        }
+
+        .response-content {
+            padding: 32px;
+        }
+
+        .success-icon {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .success-icon i {
+            font-size: 4rem;
+            color: var(--success-color);
+            background: rgba(16, 185, 129, 0.1);
+            padding: 20px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        .response-message {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .response-message h2 {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .response-message p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .info-card {
+            background: var(--dark-bg);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary-color);
+        }
+
+        .info-card .info-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .info-card .info-value {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .info-card i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .data-section {
+            background: var(--dark-bg);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .data-section h3 {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .data-section h3 i {
+            color: var(--primary-color);
+        }
+
+        .data-content {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 12px 26px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .timestamp {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .floating-icon {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: var(--primary-color);
+            border-radius: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-icon:hover {
+            transform: scale(1.1) rotate(90deg);
+            background: var(--secondary-color);
+        }
+
+        /* Loading animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .card-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .response-content {
+                padding: 20px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body oncontextmenu='return false'>
+    <div class="main-container">
+        <div class="response-card">
+            <!-- Header -->
+            <div class="card-header">
+                <h1><i class="bi bi-shield-shaded me-2"></i>InfoSecSoS Ontology</h1>
+                <div class="subtitle">Resposta do Sistema</div>
+            </div>
+
+            <!-- Response Content -->
+            <div class="response-content">
+                <!-- Success Icon -->
+                <div class="success-icon">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+
+                <!-- Response Message -->
+                <div class="response-message">
+                    <h2>Operação realizada com sucesso!</h2>
+                    <p>Sua requisição foi processada pelo sistema de ontologia InfoSecSoS.</p>
+                </div>
+
+                <!-- Info Grid -->
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="bi bi-hash"></i>
+                        <div class="info-label">ID da Resposta</div>
+                        <div class="info-value">#<%= System.currentTimeMillis() %></div>
+                    </div>
+                    <div class="info-card">
+                        <i class="bi bi-calendar"></i>
+                        <div class="info-label">Data/Hora</div>
+                        <div class="info-value"><%= new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date()) %></div>
+                    </div>
+                    <div class="info-card">
+                        <i class="bi bi-check-circle"></i>
+                        <div class="info-label">Status</div>
+                        <div class="info-value" style="color: var(--success-color);">Processado</div>
+                    </div>
+                </div>
+
+                <!-- Data Section -->
+                <div class="data-section">
+                    <h3>
+                        <i class="bi bi-code-square"></i>
+                        Dados Processados
+                    </h3>
+                    <div class="data-content">
+                        {
+                            "status": "success",
+                            "timestamp": "<%= new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date()) %>",
+                            "message": "Resposta processada com sucesso pelo sistema InfoSecSoS",
+                            "version": "1.0"
+                        }
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button onclick="window.location.href='<%=request.getContextPath()%>/index.jsp'" class="btn-primary">
+                        <i class="bi bi-house-door"></i>
+                        Voltar ao Início
+                    </button>
+                    <button onclick="window.history.back()" class="btn-secondary">
+                        <i class="bi bi-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <button onclick="window.print()" class="btn-secondary">
+                        <i class="bi bi-printer"></i>
+                        Imprimir
+                    </button>
+                </div>
+
+                <!-- Timestamp -->
+                <div class="timestamp">
+                    <i class="bi bi-clock me-2"></i>
+                    Documento gerado em <%= new java.text.SimpleDateFormat("dd/MM/yyyy 'às' HH:mm:ss").format(new java.util.Date()) %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div class="floating-icon" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <i class="bi bi-arrow-up-short"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animação de entrada
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.info-card, .data-section').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'all 0.5s ease';
+                observer.observe(item);
+            });
+
+            // Mostrar loading ao clicar em botões
+            document.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (this.classList.contains('btn-primary') || this.classList.contains('btn-secondary')) {
+                        if (!this.classList.contains('no-loading')) {
+                            const originalText = this.innerHTML;
+                            this.innerHTML = '<span class="loading me-2"></span> Processando...';
+                            this.disabled = true;
+                            
+                            // Simular processamento (remover em produção)
+                            setTimeout(() => {
+                                this.innerHTML = originalText;
+                                this.disabled = false;
+                            }, 1000);
+                        }
+                    }
+                });
+            });
+        });
+
+        // Efeito de digitação no data content
+        const dataContent = document.querySelector('.data-content');
+        if (dataContent) {
+            const originalText = dataContent.textContent;
+            dataContent.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    dataContent.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 10);
+                }
+            };
+            
+            // Iniciar animação após um pequeno delay
+            setTimeout(typeWriter, 500);
+        }
+    </script>
+</body>
+</html>
