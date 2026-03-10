@@ -20,3 +20,5 @@ management of security knowledge in SoS and its shared understanding so that sta
 in SoS. 
 Its contribution is the standardization of concepts, terms and definitions, as well as the ease of sharing information to make more explicit assumptions and assist 
 in the analysis of knowledge and domain relationships.
+
+Information Security Management in Systems-of-Systems (InfoSecSoS): DOI: 10.13140/RG.2.2.15521.26725
