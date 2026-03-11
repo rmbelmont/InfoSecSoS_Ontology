@@ -293,7 +293,7 @@
             <!-- Header -->
             <div class="card-header">
                 <h1><i class="bi bi-shield-shaded me-2"></i>InfoSecSoS Ontology</h1>
-                <div class="subtitle">Sistema de Ontologia para Segurança da Informação em Sistemas-de-Sistemas</div>
+                <div class="subtitle">Ontology for Information Security Management in Systems-of-Systems</div>
             </div>
 
             <!-- Progress Indicator -->
@@ -314,7 +314,7 @@
                     <div class="question-actions">
                         <form action="<%=request.getContextPath()%>/Form_01" method="get">
                             <button type="submit" class="btn-modern">
-                                <i class="bi bi-arrow-right-circle"></i> Responder
+                                <i class="bi bi-arrow-right-circle"></i> Reply
                             </button>
                         </form>
                     </div>
@@ -327,7 +327,7 @@
                     <div class="question-actions">
                         <form action="<%=request.getContextPath()%>/Form_02" method="get">
                             <button type="submit" class="btn-modern">
-                                <i class="bi bi-arrow-right-circle"></i> Responder
+                                <i class="bi bi-arrow-right-circle"></i> Reply
                             </button>
                         </form>
                     </div>
@@ -340,7 +340,7 @@
                     <div class="question-actions">
                         <form action="<%=request.getContextPath()%>/Form_03" method="get">
                             <button type="submit" class="btn-modern">
-                                <i class="bi bi-arrow-right-circle"></i> Responder
+                                <i class="bi bi-arrow-right-circle"></i> Reply
                             </button>
                         </form>
                     </div>
@@ -353,7 +353,7 @@
                     <div class="question-actions">
                         <form action="<%=request.getContextPath()%>/Form_04" method="get">
                             <button type="submit" class="btn-modern">
-                                <i class="bi bi-arrow-right-circle"></i> Responder
+                                <i class="bi bi-arrow-right-circle"></i> Reply
                             </button>
                         </form>
                     </div>
@@ -366,7 +366,7 @@
                     <div class="question-actions">
                         <form action="<%=request.getContextPath()%>/Form_05" method="get">
                             <button type="submit" class="btn-modern">
-                                <i class="bi bi-arrow-right-circle"></i> Responder
+                                <i class="bi bi-arrow-right-circle"></i> Reply
                             </button>
                         </form>
                     </div>
@@ -379,7 +379,7 @@
                     <div class="question-actions">
                         <form action="<%=request.getContextPath()%>/Form_06" method="get">
                             <button type="submit" class="btn-modern">
-                                <i class="bi bi-arrow-right-circle"></i> Responder
+                                <i class="bi bi-arrow-right-circle"></i> Reply
                             </button>
                         </form>
                     </div>
@@ -392,7 +392,7 @@
                     <div class="question-actions">
                         <form action="<%=request.getContextPath()%>/Form_07" method="get">
                             <button type="submit" class="btn-modern">
-                                <i class="bi bi-arrow-right-circle"></i> Responder
+                                <i class="bi bi-arrow-right-circle"></i> Reply
                             </button>
                         </form>
                     </div>
@@ -405,7 +405,7 @@
                     <div class="question-actions">
                         <form action="<%=request.getContextPath()%>/Form_10" method="get">
                             <button type="submit" class="btn-modern">
-                                <i class="bi bi-arrow-right-circle"></i> Responder
+                                <i class="bi bi-arrow-right-circle"></i> Reply
                             </button>
                         </form>
                     </div>
@@ -415,27 +415,27 @@
             <!-- Search Section -->
             <div class="search-section">
                 <div class="search-title">
-                    <i class="bi bi-search me-2"></i>Ferramentas de Busca
+                    <i class="bi bi-search me-2"></i>Search Tools
                 </div>
                 <div class="search-grid">
                     <!-- Busca por Criptografia -->
                     <div class="search-card">
-                        <h3><i class="bi bi-lock me-2"></i>Busca por Criptografia</h3>
+                        <h3><i class="bi bi-lock me-2"></i>Search by Cryptography</h3>
                         <form action="<%=request.getContextPath()%>/Form_08" method="get">
                             <input type="text" class="modern-input" name="criptografia" placeholder="Ex: AES, RSA, DES...">
                             <button type="submit" class="btn-modern w-100">
-                                <i class="bi bi-search"></i> Buscar
+                                <i class="bi bi-search"></i> Search
                             </button>
                         </form>
                     </div>
 
                     <!-- Busca por Algoritmo -->
                     <div class="search-card">
-                        <h3><i class="bi bi-cpu me-2"></i>Busca por Algoritmo</h3>
+                        <h3><i class="bi bi-cpu me-2"></i>Search by Algorithm</h3>
                         <form action="<%=request.getContextPath()%>/Form_09" method="get">
                             <input type="text" class="modern-input" name="algoritmo" placeholder="Ex: SHA-256, MD5...">
                             <button type="submit" class="btn-modern w-100">
-                                <i class="bi bi-search"></i> Buscar
+                                <i class="bi bi-search"></i> Search
                             </button>
                         </form>
                     </div>
@@ -445,10 +445,10 @@
                 <div class="tree-view-card">
                     <i class="bi bi-diagram-3 fs-1 mb-3"></i>
                     <h3 class="mb-3">Hierarchy Tree View</h3>
-                    <p class="mb-4">Visualize a estrutura hierárquica completa da ontologia InfoSecSoS</p>
+                    <p class="mb-4">Visualize the complete hierarchical structure of the InfoSecSoS ontology</p>
                     <form action="treeView.jsp" method="POST">
                         <button type="submit" class="btn-modern">
-                            <i class="bi bi-graph-up"></i> Visualizar Árvore
+                            <i class="bi bi-graph-up"></i> View Tree
                         </button>
                     </form>
                 </div>

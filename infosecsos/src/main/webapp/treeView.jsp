@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -369,7 +369,7 @@
             <!-- Header -->
             <div class="card-header">
                 <h1><i class="bi bi-diagram-3 me-2"></i>InfoSecSoS Ontology</h1>
-                <div class="subtitle"><i class="bi bi-graph-up me-1"></i> Visualização Hierárquica</div>
+                <div class="subtitle"><i class="bi bi-graph-up me-1"></i> Hierarchical View</div>
             </div>
 
             <!-- Content -->
@@ -386,7 +386,7 @@
                         <div class="tree-description">
                             <span><i class="bi bi-calendar"></i> <%= new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date()) %></span>
                             <span><i class="bi bi-clock"></i> <%= new java.text.SimpleDateFormat("HH:mm").format(new java.util.Date()) %></span>
-                            <span><i class="bi bi-tag"></i> Versão 1.0</span>
+                            <span><i class="bi bi-tag"></i> Version 1.0</span>
                         </div>
                     </div>
                 </div>
@@ -397,7 +397,7 @@
                         <img src="imagens/02.png" alt="Tree View - InfoSecSoS Ontology" class="img-fluid">
                         <div class="image-caption">
                             <i class="bi bi-info-circle-fill"></i>
-                            Estrutura hierárquica da ontologia InfoSecSoS
+                            Hierarchical structure of the InfoSecSoS ontology
                         </div>
                     </div>
                 </div>
@@ -405,22 +405,18 @@
                 <!-- Action Buttons -->
                 <div class="action-buttons">
                     <button onclick="window.location.href='<%= request.getContextPath() %>/index.jsp'" class="btn-primary">
-                        <i class="bi bi-house-door-fill"></i> Voltar ao Início
+                        <i class="bi bi-house-door-fill"></i> Back to Home
                     </button>
                     
                     <button onclick="window.print()" class="btn-secondary">
-                        <i class="bi bi-printer"></i> Imprimir Visualização
-                    </button>
-                    
-                    <button onclick="window.location.reload()" class="btn-secondary">
-                        <i class="bi bi-arrow-repeat"></i> Atualizar
+                        <i class="bi bi-printer"></i> Print View
                     </button>
                 </div>
 
                 <!-- Timestamp -->
                 <div class="timestamp">
                     <i class="bi bi-clock-history"></i>
-                    Visualização gerada em <%= new java.text.SimpleDateFormat("dd/MM/yyyy 'às' HH:mm:ss").format(new java.util.Date()) %>
+                    View generated on <%= new java.text.SimpleDateFormat("dd/MM/yyyy 'at' HH:mm:ss").format(new java.util.Date()) %>
                 </div>
             </div>
         </div>
@@ -435,7 +431,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Animação de entrada
+            // Entrance animation
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -452,7 +448,7 @@
                 observer.observe(item);
             });
 
-            // Adicionar efeito de zoom na imagem
+            // Add zoom effect to image
             const image = document.querySelector('.image-wrapper img');
             if (image) {
                 image.addEventListener('click', function() {

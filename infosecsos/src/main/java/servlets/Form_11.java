@@ -5,10 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 /**
- * Servlet implementation class Form_11 - Tipos de Ameaças
+ * Servlet implementation class Form_11 - Threat Types
  */
 @WebServlet("/Form_11")
 public class Form_11 extends HttpServlet {
@@ -51,11 +48,11 @@ public class Form_11 extends HttpServlet {
         
         // Início do HTML com design moderno
         out.println("<!DOCTYPE html>");
-        out.println("<html lang='pt-BR'>");
+        out.println("<html lang='en'>");
         out.println("<head>");
         out.println("<meta charset='UTF-8'>");
         out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-        out.println("<title>InfoSecSoS Ontology - Tipos de Ameaças</title>");
+        out.println("<title>InfoSecSoS Ontology - Threat Types</title>");
         
         // Bootstrap e Fonts
         out.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>");
@@ -494,7 +491,7 @@ public class Form_11 extends HttpServlet {
         // Header
         out.println("<div class='card-header'>");
         out.println("<h1><i class='bi bi-shield-shaded me-2'></i>InfoSecSoS Ontology</h1>");
-        out.println("<div class='subtitle'><i class='bi bi-exclamation-triangle me-1'></i> Tipos de Ameaças</div>");
+        out.println("<div class='subtitle'><i class='bi bi-exclamation-triangle me-1'></i> Threat Types</div>");
         out.println("</div>");
         
         // Content
@@ -505,33 +502,33 @@ public class Form_11 extends HttpServlet {
         out.println("<div class='stat-card'>");
         out.println("<div class='stat-icon'><i class='bi bi-exclamation-triangle-fill'></i></div>");
         out.println("<div class='stat-number'>" + numero + "</div>");
-        out.println("<div class='stat-label'>Tipos de Ameaças</div>");
+        out.println("<div class='stat-label'>Threat Types</div>");
         out.println("</div>");
         
         out.println("<div class='stat-card' style=\"background: linear-gradient(135deg, #10b981, #34d399);\">");
         out.println("<div class='stat-icon'><i class='bi bi-list-check'></i></div>");
         out.println("<div class='stat-number'>" + list.size() + "</div>");
-        out.println("<div class='stat-label'>Itens Listados</div>");
+        out.println("<div class='stat-label'>Items Listed</div>");
         out.println("</div>");
         
         out.println("<div class='stat-card' style=\"background: linear-gradient(135deg, #f97316, #f59e0b);\">");
         out.println("<div class='stat-icon'><i class='bi bi-clock'></i></div>");
         out.println("<div class='stat-number'>" + new java.text.SimpleDateFormat("HH:mm").format(new java.util.Date()) + "</div>");
-        out.println("<div class='stat-label'>Horário</div>");
+        out.println("<div class='stat-label'>Time</div>");
         out.println("</div>");
         out.println("</div>");
         
         // Info Message
         out.println("<div class='info-message'>");
         out.println("<i class='bi bi-info-circle-fill'></i>");
-        out.println("<div><strong>The amount of " + numero + " Threat Types!</strong> Lista completa de tipos de ameaças em sistemas-de-sistemas.</div>");
+        out.println("<div><strong>The amount of " + numero + " Threat Types!</strong> Complete list of threat types in systems-of-systems.</div>");
         out.println("</div>");
         
         // Section Title
         out.println("<div class='section-title'>");
         out.println("<i class='bi bi-shield-exclamation'></i>");
-        out.println("Tipos de Ameaças Identificadas");
-        out.println("<span class='badge-custom ms-2'><i class='bi bi-tag'></i> " + list.size() + " itens</span>");
+        out.println("Threat Types Identified");
+        out.println("<span class='badge-custom ms-2'><i class='bi bi-tag'></i> " + list.size() + " items</span>");
         out.println("</div>");
         
         // Lista de tipos de ameaças
@@ -540,7 +537,7 @@ public class Form_11 extends HttpServlet {
         if (list.isEmpty()) {
             out.println("<div style='text-align: center; padding: 40px; color: var(--text-secondary);'>");
             out.println("<i class='bi bi-emoji-frown' style='font-size: 3rem;'></i>");
-            out.println("<p style='margin-top: 15px;'>Nenhum tipo de ameaça encontrado</p>");
+            out.println("<p style='margin-top: 15px;'>No threat type found</p>");
             out.println("</div>");
         } else {
             for (int i = 0; i < list.size(); i++) {
@@ -550,8 +547,8 @@ public class Form_11 extends HttpServlet {
                 out.println("<div class='item-content'>");
                 out.println("<div class='item-title'>" + list.get(i).getNome().toString() + "</div>");
                 out.println("<div class='item-subtitle'>");
-                out.println("<i class='bi bi-tag'></i> Tipo de ameaça");
-                out.println("<span class='badge-custom ms-2'><i class='bi bi-exclamation-triangle'></i> InfoSec</span>");
+                out.println("<i class='bi bi-tag'></i> Threat Type");
+                out.println("<span class='badge-custom ms-2'><i class='bi bi-exclamation-triangle'></i> InfoSecSoS</span>");
                 out.println("</div>");
                 out.println("</div>");
                 out.println("<div class='item-icon'><i class='bi bi-arrow-right-circle-fill'></i></div>");
@@ -564,22 +561,20 @@ public class Form_11 extends HttpServlet {
         // Action Buttons
         out.println("<div class='action-buttons'>");
         out.println("<button onclick=\"window.location.href='" + request.getContextPath() + "/index.jsp'\" class='btn-primary'>");
-        out.println("<i class='bi bi-house-door-fill'></i> Voltar ao Início");
+        out.println("<i class='bi bi-house-door-fill'></i> Back to Home");
         out.println("</button>");
         
-        out.println("<button onclick='window.history.back()' class='btn-secondary'>");
-        out.println("<i class='bi bi-arrow-left-circle'></i> Nova Consulta");
-        out.println("</button>");
+        // Botão "New Query" removido
         
         out.println("<button onclick='window.print()' class='btn-outline'>");
-        out.println("<i class='bi bi-printer'></i> Imprimir Resultado");
+        out.println("<i class='bi bi-printer'></i> Print Result");
         out.println("</button>");
         out.println("</div>");
         
         // Timestamp
         out.println("<div class='timestamp'>");
         out.println("<i class='bi bi-clock-history'></i>");
-        out.println("Resultado gerado em " + new java.text.SimpleDateFormat("dd/MM/yyyy 'às' HH:mm:ss").format(new java.util.Date()));
+        out.println("Result generated on " + new java.text.SimpleDateFormat("dd/MM/yyyy 'at' HH:mm:ss").format(new java.util.Date()));
         out.println("</div>");
         
         out.println("</div>"); // Fecha content
@@ -595,7 +590,7 @@ public class Form_11 extends HttpServlet {
         out.println("<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>");
         out.println("<script>");
         out.println("document.addEventListener('DOMContentLoaded', function() {");
-        out.println("    // Intersection Observer para animações");
+        out.println("    // Intersection Observer for animations");
         out.println("    const observer = new IntersectionObserver((entries) => {");
         out.println("        entries.forEach(entry => {");
         out.println("            if (entry.isIntersecting) {");
@@ -612,7 +607,7 @@ public class Form_11 extends HttpServlet {
         out.println("        observer.observe(item);");
         out.println("    });");
         out.println("");
-        out.println("    // Loading effect nos botões");
+        out.println("    // Loading effect on buttons");
         out.println("    document.querySelectorAll('button').forEach(btn => {");
         out.println("        btn.addEventListener('click', function(e) {");
         out.println("            if (this.classList.contains('btn-primary') || ");
@@ -621,7 +616,7 @@ public class Form_11 extends HttpServlet {
         out.println("                if (!this.classList.contains('no-loading') && ");
         out.println("                    !this.classList.contains('floating-icon')) {");
         out.println("                    const originalText = this.innerHTML;");
-        out.println("                    this.innerHTML = '<span class=\"spinner-border spinner-border-sm me-2\" role=\"status\"></span> Processando...';");
+        out.println("                    this.innerHTML = '<span class=\"spinner-border spinner-border-sm me-2\" role=\"status\"></span> Loading...';");
         out.println("                    this.disabled = true;");
         out.println("                    setTimeout(() => {");
         out.println("                        this.innerHTML = originalText;");
@@ -637,9 +632,6 @@ public class Form_11 extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
         
-        // Inclui o dispatcher original
-  //      final RequestDispatcher requestDispatcher = request.getRequestDispatcher("/greet.jsp");
-  //      requestDispatcher.include(request, response);
         out.close();
     }
 }

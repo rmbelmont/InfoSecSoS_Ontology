@@ -54,7 +54,7 @@ public class Form_03 extends HttpServlet {
         out.println("<head>");
         out.println("<meta charset='UTF-8'>");
         out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-        out.println("<title>InfoSecSoS Ontology - Fatores Específicos</title>");
+        out.println("<title>InfoSecSoSSoS Ontology - Specific Factors</title>");
         
         // Bootstrap e Fonts
         out.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>");
@@ -492,8 +492,8 @@ public class Form_03 extends HttpServlet {
         
         // Header
         out.println("<div class='card-header'>");
-        out.println("<h1><i class='bi bi-shield-shaded me-2'></i>InfoSecSoS Ontology</h1>");
-        out.println("<div class='subtitle'><i class='bi bi-pin-angle me-1'></i> Fatores Específicos de Segurança</div>");
+        out.println("<h1><i class='bi bi-shield-shaded me-2'></i>InfoSecSoSSoS Ontology</h1>");
+        out.println("<div class='subtitle'><i class='bi bi-pin-angle me-1'></i> Specific Factors</div>");
         out.println("</div>");
         
         // Content
@@ -504,32 +504,32 @@ public class Form_03 extends HttpServlet {
         out.println("<div class='stat-card'>");
         out.println("<div class='stat-icon'><i class='bi bi-pin-angle-fill'></i></div>");
         out.println("<div class='stat-number'>" + numero + "</div>");
-        out.println("<div class='stat-label'>Fatores Específicos</div>");
+        out.println("<div class='stat-label'>Specific Factors</div>");
         out.println("</div>");
         
         out.println("<div class='stat-card' style=\"background: linear-gradient(135deg, #f97316, #f59e0b);\">");
         out.println("<div class='stat-icon'><i class='bi bi-list-check'></i></div>");
         out.println("<div class='stat-number'>" + list.size() + "</div>");
-        out.println("<div class='stat-label'>Itens Listados</div>");
+        out.println("<div class='stat-label'>Items Listed</div>");
         out.println("</div>");
         
         out.println("<div class='stat-card' style=\"background: linear-gradient(135deg, #6366f1, #8b5cf6);\">");
         out.println("<div class='stat-icon'><i class='bi bi-clock'></i></div>");
         out.println("<div class='stat-number'>" + new java.text.SimpleDateFormat("HH:mm").format(new java.util.Date()) + "</div>");
-        out.println("<div class='stat-label'>Horário</div>");
+        out.println("<div class='stat-label'>Time</div>");
         out.println("</div>");
         out.println("</div>");
         
         // Info Message
         out.println("<div class='info-message'>");
         out.println("<i class='bi bi-info-circle-fill'></i>");
-        out.println("<div><strong>The amount of " + numero + " Specific Factors!</strong> Lista completa de fatores específicos de segurança.</div>");
+        out.println("<div><strong>The amount of " + numero + " Specific Factors!</strong> Complete list of specific security factors.</div>");
         out.println("</div>");
         
         // Section Title
         out.println("<div class='section-title'>");
         out.println("<i class='bi bi-pin-map-fill'></i>");
-        out.println("Fatores Específicos Identificados");
+        out.println("Specific Factors Identified");
         out.println("<span class='badge-custom ms-2'><i class='bi bi-tag'></i> " + list.size() + " itens</span>");
         out.println("</div>");
         
@@ -539,7 +539,7 @@ public class Form_03 extends HttpServlet {
         if (list.isEmpty()) {
             out.println("<div style='text-align: center; padding: 40px; color: var(--text-secondary);'>");
             out.println("<i class='bi bi-emoji-frown' style='font-size: 3rem;'></i>");
-            out.println("<p style='margin-top: 15px;'>Nenhum fator específico encontrado</p>");
+            out.println("<p style='margin-top: 15px;'>No specific factors found</p>");
             out.println("</div>");
         } else {
             for (int i = 0; i < list.size(); i++) {
@@ -549,8 +549,8 @@ public class Form_03 extends HttpServlet {
                 out.println("<div class='item-content'>");
                 out.println("<div class='item-title'>" + list.get(i).getNome().toString() + "</div>");
                 out.println("<div class='item-subtitle'>");
-                out.println("<i class='bi bi-tag'></i> Fator específico");
-                out.println("<span class='badge-custom ms-2'><i class='bi bi-pin'></i> InfoSec</span>");
+                out.println("<i class='bi bi-tag'></i> Specific Factor");
+                out.println("<span class='badge-custom ms-2'><i class='bi bi-pin'></i> InfoSecSoS</span>");
                 out.println("</div>");
                 out.println("</div>");
                 out.println("<div class='item-icon'><i class='bi bi-arrow-right-circle-fill'></i></div>");
@@ -563,22 +563,22 @@ public class Form_03 extends HttpServlet {
         // Action Buttons
         out.println("<div class='action-buttons'>");
         out.println("<button onclick=\"window.location.href='" + request.getContextPath() + "/index.jsp'\" class='btn-primary'>");
-        out.println("<i class='bi bi-house-door-fill'></i> Voltar ao Início");
+        out.println("<i class='bi bi-house-door-fill'></i> Back to Home");
         out.println("</button>");
         
         out.println("<button onclick='window.history.back()' class='btn-secondary'>");
-        out.println("<i class='bi bi-arrow-left-circle'></i> Nova Consulta");
+        out.println("<i class='bi bi-arrow-left-circle'></i> New Query");
         out.println("</button>");
         
         out.println("<button onclick='window.print()' class='btn-outline'>");
-        out.println("<i class='bi bi-printer'></i> Imprimir Resultado");
+        out.println("<i class='bi bi-printer'></i> Print Result");
         out.println("</button>");
         out.println("</div>");
         
         // Timestamp
         out.println("<div class='timestamp'>");
         out.println("<i class='bi bi-clock-history'></i>");
-        out.println("Resultado gerado em " + new java.text.SimpleDateFormat("dd/MM/yyyy 'às' HH:mm:ss").format(new java.util.Date()));
+        out.println("Result generated on " + new java.text.SimpleDateFormat("dd/MM/yyyy 'at' HH:mm:ss").format(new java.util.Date()));
         out.println("</div>");
         
         out.println("</div>"); // Fecha content

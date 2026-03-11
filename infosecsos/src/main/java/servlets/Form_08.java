@@ -5,10 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 /**
- * Servlet implementation class Formulario8 - Busca de Criptografia
+ * Servlet implementation class Formulario8 - Search Encryption
  */
 @WebServlet("/Form_08")
 public class Form_08 extends HttpServlet {
@@ -36,7 +33,7 @@ public class Form_08 extends HttpServlet {
         
         String criptografia = request.getParameter("criptografia");
         if (criptografia == null || criptografia.trim().isEmpty()) {
-            criptografia = "vazio";
+            criptografia = "empty";
         }
 
         String resultado = null;
@@ -56,11 +53,11 @@ public class Form_08 extends HttpServlet {
         
         // Início do HTML com design moderno
         out.println("<!DOCTYPE html>");
-        out.println("<html lang='pt-BR'>");
+        out.println("<html lang='en'>");
         out.println("<head>");
         out.println("<meta charset='UTF-8'>");
         out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-        out.println("<title>InfoSecSoS Ontology - Resultado da Busca</title>");
+        out.println("<title>InfoSecSoS Ontology - Search Result</title>");
         
         // Bootstrap e Fonts
         out.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>");
@@ -441,7 +438,7 @@ public class Form_08 extends HttpServlet {
         // Header
         out.println("<div class='card-header'>");
         out.println("<h1><i class='bi bi-shield-shaded me-2'></i>InfoSecSoS Ontology</h1>");
-        out.println("<div class='subtitle'><i class='bi bi-search me-1'></i> Resultado da Busca por Criptografia</div>");
+        out.println("<div class='subtitle'><i class='bi bi-search me-1'></i> Encryption Search Result</div>");
         out.println("</div>");
         
         // Content
@@ -454,11 +451,11 @@ public class Form_08 extends HttpServlet {
         out.println("</div>");
         out.println("<div class='search-info'>");
         out.println("<div class='search-term'>");
-        out.println("Termo buscado: <span>" + criptografia + "</span>");
+        out.println("Search term: <span>" + criptografia + "</span>");
         out.println("</div>");
         out.println("<div class='search-date'>");
         out.println("<i class='bi bi-clock'></i>");
-        out.println("Busca realizada em " + new java.text.SimpleDateFormat("dd/MM/yyyy 'às' HH:mm:ss").format(new java.util.Date()));
+        out.println("Search performed on " + new java.text.SimpleDateFormat("dd/MM/yyyy 'at' HH:mm:ss").format(new java.util.Date()));
         out.println("</div>");
         out.println("</div>");
         out.println("</div>");
@@ -466,28 +463,28 @@ public class Form_08 extends HttpServlet {
         // Result Container
         out.println("<div class='result-container'>");
         out.println("<div class='result-badge'>");
-        out.println("<i class='bi bi-lock me-1'></i> SOLUÇÃO DE CRIPTOGRAFIA ENCONTRADA");
+        out.println("<i class='bi bi-lock me-1'></i> ENCRYPTION SOLUTION FOUND");
         out.println("</div>");
         
-        if (resultado != null && !resultado.isEmpty() && !resultado.equals("vazio")) {
+        if (resultado != null && !resultado.isEmpty() && !resultado.equals("empty")) {
             out.println("<div class='result-content'>");
             out.println("<div class='result-title'>");
             out.println("<i class='bi bi-key-fill'></i>");
-            out.println("Resultado da Busca");
+            out.println("Search Result");
             out.println("</div>");
             out.println("<div class='result-value'>");
             out.println(resultado);
             out.println("</div>");
             out.println("<div style='display: flex; justify-content: center; gap: 10px; margin-top: 20px;'>");
-            out.println("<span class='badge-custom'><i class='bi bi-tag'></i> Criptografia</span>");
-            out.println("<span class='badge-custom'><i class='bi bi-shield'></i> InfoSec</span>");
+            out.println("<span class='badge-custom'><i class='bi bi-tag'></i> Encryption</span>");
+            out.println("<span class='badge-custom'><i class='bi bi-shield'></i> InfoSecSoS</span>");
             out.println("</div>");
             out.println("</div>");
         } else {
             out.println("<div class='result-empty'>");
             out.println("<i class='bi bi-emoji-frown'></i>");
-            out.println("<h3>Nenhum resultado encontrado</h3>");
-            out.println("<p style='margin-top: 10px; color: var(--text-secondary);'>Não foi encontrada nenhuma solução de criptografia para o termo \"" + criptografia + "\"</p>");
+            out.println("<h3>No results found</h3>");
+            out.println("<p style='margin-top: 10px; color: var(--text-secondary);'>No encryption solution found for the term \"" + criptografia + "\"</p>");
             out.println("</div>");
         }
         
@@ -496,22 +493,20 @@ public class Form_08 extends HttpServlet {
         // Action Buttons
         out.println("<div class='action-buttons'>");
         out.println("<button onclick=\"window.location.href='" + request.getContextPath() + "/index.jsp'\" class='btn-primary'>");
-        out.println("<i class='bi bi-house-door-fill'></i> Voltar ao Início");
+        out.println("<i class='bi bi-house-door-fill'></i> Back to Home");
         out.println("</button>");
         
-        out.println("<button onclick='window.history.back()' class='btn-secondary'>");
-        out.println("<i class='bi bi-arrow-left-circle'></i> Nova Busca");
-        out.println("</button>");
+        // Botão "New Search" removido
         
         out.println("<button onclick='window.print()' class='btn-outline'>");
-        out.println("<i class='bi bi-printer'></i> Imprimir Resultado");
+        out.println("<i class='bi bi-printer'></i> Print Result");
         out.println("</button>");
         out.println("</div>");
         
         // Timestamp
         out.println("<div class='timestamp'>");
         out.println("<i class='bi bi-clock-history'></i>");
-        out.println("Resultado gerado em " + new java.text.SimpleDateFormat("dd/MM/yyyy 'às' HH:mm:ss").format(new java.util.Date()));
+        out.println("Result generated on " + new java.text.SimpleDateFormat("dd/MM/yyyy 'at' HH:mm:ss").format(new java.util.Date()));
         out.println("</div>");
         
         out.println("</div>"); // Fecha content
@@ -527,7 +522,7 @@ public class Form_08 extends HttpServlet {
         out.println("<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>");
         out.println("<script>");
         out.println("document.addEventListener('DOMContentLoaded', function() {");
-        out.println("    // Animação de entrada");
+        out.println("    // Animation on entry");
         out.println("    const observer = new IntersectionObserver((entries) => {");
         out.println("        entries.forEach(entry => {");
         out.println("            if (entry.isIntersecting) {");
@@ -544,7 +539,7 @@ public class Form_08 extends HttpServlet {
         out.println("        observer.observe(item);");
         out.println("    });");
         out.println("");
-        out.println("    // Loading effect nos botões");
+        out.println("    // Loading effect on buttons");
         out.println("    document.querySelectorAll('button').forEach(btn => {");
         out.println("        btn.addEventListener('click', function(e) {");
         out.println("            if (this.classList.contains('btn-primary') || ");
@@ -553,7 +548,7 @@ public class Form_08 extends HttpServlet {
         out.println("                if (!this.classList.contains('no-loading') && ");
         out.println("                    !this.classList.contains('floating-icon')) {");
         out.println("                    const originalText = this.innerHTML;");
-        out.println("                    this.innerHTML = '<span class=\"spinner-border spinner-border-sm me-2\" role=\"status\"></span> Processando...';");
+        out.println("                    this.innerHTML = '<span class=\"spinner-border spinner-border-sm me-2\" role=\"status\"></span> Loading...';");
         out.println("                    this.disabled = true;");
         out.println("                    setTimeout(() => {");
         out.println("                        this.innerHTML = originalText;");
@@ -569,9 +564,6 @@ public class Form_08 extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
         
-        // Inclui o dispatcher original
-   //     final RequestDispatcher requestDispatcher = request.getRequestDispatcher("/greet.jsp");
-   //     requestDispatcher.include(request, response);
         out.close();
     }
 }

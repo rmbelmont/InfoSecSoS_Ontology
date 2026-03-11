@@ -5,10 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,18 +19,19 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 @WebServlet("/Form_05")
 public class Form_05 extends HttpServlet {
     private static final long serialVersionUID = 1L;
-       
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
         List<String> resposta = new ArrayList<>();
         Integer numero = null;
-        
+
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
-        
+
         Principal principal = new Principal();
         ArrayList<ListaOrdenada> list = new ArrayList<ListaOrdenada>();
-        
+
         try {
             resposta = principal.Avaliacao();
             List<String> resposta1 = principal.transformarInstancia(resposta);
@@ -44,22 +42,25 @@ public class Form_05 extends HttpServlet {
         } catch (OWLOntologyCreationException e) {
             e.printStackTrace();
         }
-        
+
         final PrintWriter out = response.getWriter();
-        
+
         // Início do HTML com design moderno
         out.println("<!DOCTYPE html>");
         out.println("<html lang='pt-BR'>");
         out.println("<head>");
         out.println("<meta charset='UTF-8'>");
         out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-        out.println("<title>InfoSecSoS Ontology - Métodos de Avaliação</title>");
-        
+        out.println("<title>InfoSecSoS Ontology - Assessment Methods</title>");
+
         // Bootstrap e Fonts
-        out.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>");
-        out.println("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css'>");
-        out.println("<link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' rel='stylesheet'>");
-        
+        out.println(
+                "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>");
+        out.println(
+                "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css'>");
+        out.println(
+                "<link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' rel='stylesheet'>");
+
         // CSS Customizado
         out.println("<style>");
         out.println(":root {");
@@ -97,7 +98,8 @@ public class Form_05 extends HttpServlet {
         out.println("    left: 0;");
         out.println("    right: 0;");
         out.println("    bottom: 0;");
-        out.println("    background: url('data:image/svg+xml,<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 100 100\\\" opacity=\\\"0.1\\\"><path d=\\\"M0 0 L100 100 M100 0 L0 100\\\" stroke=\\\"white\\\" stroke-width=\\\"0.5\\\"/></svg>');");
+        out.println(
+                "    background: url('data:image/svg+xml,<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 100 100\\\" opacity=\\\"0.1\\\"><path d=\\\"M0 0 L100 100 M100 0 L0 100\\\" stroke=\\\"white\\\" stroke-width=\\\"0.5\\\"/></svg>');");
         out.println("    pointer-events: none;");
         out.println("}");
         out.println("");
@@ -483,62 +485,64 @@ public class Form_05 extends HttpServlet {
         out.println("}");
         out.println("</style>");
         out.println("</head>");
-        
+
         // Corpo do HTML
         out.println("<body oncontextmenu='return false'>");
         out.println("<div class='main-container'>");
         out.println("<div class='result-card'>");
-        
+
         // Header
         out.println("<div class='card-header'>");
         out.println("<h1><i class='bi bi-shield-shaded me-2'></i>InfoSecSoS Ontology</h1>");
-        out.println("<div class='subtitle'><i class='bi bi-clipboard-data me-1'></i> Métodos de Avaliação</div>");
+        out.println("<div class='subtitle'><i class='bi bi-clipboard-data me-1'></i> Assessment Methods</div>");
         out.println("</div>");
-        
+
         // Content
         out.println("<div class='content'>");
-        
+
         // Stats Grid
         out.println("<div class='stats-grid'>");
         out.println("<div class='stat-card'>");
         out.println("<div class='stat-icon'><i class='bi bi-clipboard-data-fill'></i></div>");
         out.println("<div class='stat-number'>" + numero + "</div>");
-        out.println("<div class='stat-label'>Métodos de Avaliação</div>");
+        out.println("<div class='stat-label'>Assessment Methods</div>");
         out.println("</div>");
-        
+
         out.println("<div class='stat-card' style=\"background: linear-gradient(135deg, #10b981, #34d399);\">");
         out.println("<div class='stat-icon'><i class='bi bi-list-check'></i></div>");
         out.println("<div class='stat-number'>" + list.size() + "</div>");
-        out.println("<div class='stat-label'>Itens Listados</div>");
+        out.println("<div class='stat-label'>Items Listed</div>");
         out.println("</div>");
-        
+
         out.println("<div class='stat-card' style=\"background: linear-gradient(135deg, #f97316, #f59e0b);\">");
         out.println("<div class='stat-icon'><i class='bi bi-clock'></i></div>");
-        out.println("<div class='stat-number'>" + new java.text.SimpleDateFormat("HH:mm").format(new java.util.Date()) + "</div>");
-        out.println("<div class='stat-label'>Horário</div>");
+        out.println("<div class='stat-number'>" + new java.text.SimpleDateFormat("HH:mm").format(new java.util.Date())
+                + "</div>");
+        out.println("<div class='stat-label'>Time</div>");
         out.println("</div>");
         out.println("</div>");
-        
+
         // Info Message
         out.println("<div class='info-message'>");
         out.println("<i class='bi bi-info-circle-fill'></i>");
-        out.println("<div><strong>The amount of " + numero + " Assessment Methodologies!</strong> Lista completa de métodos de avaliação de segurança.</div>");
+        out.println("<div><strong>The amount of " + numero
+                + " Assessment Methods!</strong> Complete list of security assessment methods.</div>");
         out.println("</div>");
-        
+
         // Section Title
         out.println("<div class='section-title'>");
         out.println("<i class='bi bi-bar-chart-fill'></i>");
-        out.println("Métodos de Avaliação Identificados");
-        out.println("<span class='badge-custom ms-2'><i class='bi bi-tag'></i> " + list.size() + " itens</span>");
+        out.println("Assessment Methods Identified");
+        out.println("<span class='badge-custom ms-2'><i class='bi bi-tag'></i> " + list.size() + " items</span>");
         out.println("</div>");
-        
+
         // Lista de métodos de avaliação
         out.println("<div class='list-container'>");
-        
+
         if (list.isEmpty()) {
             out.println("<div style='text-align: center; padding: 40px; color: var(--text-secondary);'>");
             out.println("<i class='bi bi-emoji-frown' style='font-size: 3rem;'></i>");
-            out.println("<p style='margin-top: 15px;'>Nenhum método de avaliação encontrado</p>");
+            out.println("<p style='margin-top: 15px;'>No assessment method found</p>");
             out.println("</div>");
         } else {
             for (int i = 0; i < list.size(); i++) {
@@ -548,49 +552,48 @@ public class Form_05 extends HttpServlet {
                 out.println("<div class='item-content'>");
                 out.println("<div class='item-title'>" + list.get(i).getNome().toString() + "</div>");
                 out.println("<div class='item-subtitle'>");
-                out.println("<i class='bi bi-tag'></i> Método de avaliação");
-                out.println("<span class='badge-custom ms-2'><i class='bi bi-clipboard'></i> InfoSec</span>");
+                out.println("<i class='bi bi-tag'></i> Assessment Method");
+                out.println("<span class='badge-custom ms-2'><i class='bi bi-clipboard'></i> InfoSecSoS</span>");
                 out.println("</div>");
                 out.println("</div>");
                 out.println("<div class='item-icon'><i class='bi bi-arrow-right-circle-fill'></i></div>");
                 out.println("</div>");
             }
         }
-        
+
         out.println("</div>");
-        
+
         // Action Buttons
         out.println("<div class='action-buttons'>");
-        out.println("<button onclick=\"window.location.href='" + request.getContextPath() + "/index.jsp'\" class='btn-primary'>");
-        out.println("<i class='bi bi-house-door-fill'></i> Voltar ao Início");
+        out.println("<button onclick=\"window.location.href='" + request.getContextPath()
+                + "/index.jsp'\" class='btn-primary'>");
+        out.println("<i class='bi bi-house-door-fill'></i> Back to Home");
         out.println("</button>");
-        
-        out.println("<button onclick='window.history.back()' class='btn-secondary'>");
-        out.println("<i class='bi bi-arrow-left-circle'></i> Nova Consulta");
-        out.println("</button>");
-        
+
         out.println("<button onclick='window.print()' class='btn-outline'>");
-        out.println("<i class='bi bi-printer'></i> Imprimir Resultado");
+        out.println("<i class='bi bi-printer'></i> Print Result");
         out.println("</button>");
         out.println("</div>");
-        
+
         // Timestamp
         out.println("<div class='timestamp'>");
         out.println("<i class='bi bi-clock-history'></i>");
-        out.println("Resultado gerado em " + new java.text.SimpleDateFormat("dd/MM/yyyy 'às' HH:mm:ss").format(new java.util.Date()));
+        out.println("Result generated on "
+                + new java.text.SimpleDateFormat("dd/MM/yyyy 'at' HH:mm:ss").format(new java.util.Date()));
         out.println("</div>");
-        
+
         out.println("</div>"); // Fecha content
         out.println("</div>"); // Fecha result-card
         out.println("</div>"); // Fecha main-container
-        
+
         // Floating Action Button
         out.println("<button class='floating-icon' onclick='window.scrollTo({top: 0, behavior: \"smooth\"});'>");
         out.println("<i class='bi bi-arrow-up'></i>");
         out.println("</button>");
-        
+
         // Scripts
-        out.println("<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>");
+        out.println(
+                "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>");
         out.println("<script>");
         out.println("document.addEventListener('DOMContentLoaded', function() {");
         out.println("    // Intersection Observer para animações");
@@ -619,7 +622,8 @@ public class Form_05 extends HttpServlet {
         out.println("                if (!this.classList.contains('no-loading') && ");
         out.println("                    !this.classList.contains('floating-icon')) {");
         out.println("                    const originalText = this.innerHTML;");
-        out.println("                    this.innerHTML = '<span class=\"spinner-border spinner-border-sm me-2\" role=\"status\"></span> Processando...';");
+        out.println(
+                "                    this.innerHTML = '<span class=\"spinner-border spinner-border-sm me-2\" role=\"status\"></span> Loading...';");
         out.println("                    this.disabled = true;");
         out.println("                    setTimeout(() => {");
         out.println("                        this.innerHTML = originalText;");
@@ -631,13 +635,10 @@ public class Form_05 extends HttpServlet {
         out.println("    });");
         out.println("});");
         out.println("</script>");
-        
+
         out.println("</body>");
         out.println("</html>");
-        
-        // Inclui o dispatcher original
-     //   final RequestDispatcher requestDispatcher = request.getRequestDispatcher("/greet.jsp");
-     //   requestDispatcher.include(request, response);
+
         out.close();
     }
 }
